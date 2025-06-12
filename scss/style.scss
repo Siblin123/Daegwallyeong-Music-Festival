@@ -1,0 +1,64 @@
+@import "common";
+@import "header";
+@import "footer";
+
+#header {
+  .header-inner {
+    height: 80px;
+    .flex-box {
+      display: flex;
+      justify-content: space-between;
+      .left {
+        display: flex;
+        align-items: center;
+        border: 1px solid #000;
+        .logo {
+          margin-right: 63px;
+          a {
+            img {
+            }
+          }
+        }
+        nav {
+          .menu {
+            display: flex;
+            li {
+              a {
+              }
+              .sub-menu-box {
+                ul[sub-menu] {
+                  max-height: 0;
+                  overflow: hidden;
+                  li {
+                    a {
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .right {
+        display: flex;
+        align-items: center;
+        button{
+          padding: 10px;
+        }
+
+        .mypage {
+          button {
+          }
+        }
+        .lang {
+          button {
+          }
+        }
+        .search {
+          button {
+          }
+        }
+      }
+    }
+  }
+}
