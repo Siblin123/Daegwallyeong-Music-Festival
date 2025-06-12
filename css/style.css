@@ -12,10 +12,31 @@ ul, li {
 [class*=inner] {
   width: 1700px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
+#header {
+  position: fixed;
+  z-index: 9999999;
+}
 #header .header-inner {
   height: 80px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#header .header-inner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #000;
 }
 #header .header-inner .flex-box {
   display: -webkit-box;
@@ -24,6 +45,7 @@ ul, li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
 }
 #header .header-inner .flex-box .left {
   display: -webkit-box;
@@ -32,7 +54,6 @@ ul, li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid #000;
 }
 #header .header-inner .flex-box .left .logo {
   margin-right: 63px;
@@ -41,6 +62,7 @@ ul, li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 20px;
 }
 #header .header-inner .flex-box .left nav .menu li .sub-menu-box ul[sub-menu] {
   max-height: 0;
@@ -56,4 +78,156 @@ ul, li {
 }
 #header .header-inner .flex-box .right button {
   padding: 10px;
+}
+#search {
+  width: 100%;
+}
+#search .blank .inner {
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+#search .blank .inner.active {
+  max-height: 300px;
+  overflow: visible;
+}
+#search .blank .inner .searchform .search-inner .input {
+  width: 50%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+}
+#search .blank .inner .searchform .search-inner .input::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #000;
+}
+#search .blank .inner .searchform .search-inner .input input {
+  -webkit-box-flex: 9;
+      -ms-flex: 9;
+          flex: 9;
+  border: none;
+}
+#search .blank .inner .searchform .search-inner .input input:focus {
+  outline: none;
+}
+#search .blank .inner .searchform .search-inner .input button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#concert {
+  margin-top: 80px;
+  border: 1px solid #000;
+}
+#concert .concert-inner .title-box h3 {
+  font-size: 120px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+#concert .concert-inner .flex-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 45px;
+}
+#concert .concert-inner .flex-box .data p {
+  font-size: 64px;
+}
+#concert .concert-inner .flex-box .all-day {
+  width: 100px;
+  height: 60px;
+}
+#concert .concert-inner .flex-box .all-day a {
+  font-size: 16px;
+}
+#concert .concert-inner .poster-Swiper .swiper-wrapper .swiper-slide {
+  width: auto;
+}
+#concert .concert-inner .poster-Swiper .swiper-wrapper .swiper-slide .poster-img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+#concert .concert-inner .poster-Swiper .swiper-wrapper .swiper-slide .poster-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+#concert .concert-inner .poster-Swiper .swiper-wrapper .swiper-slide .poster-info {
+  padding: 1rem;
+}
+#concert .concert-inner .poster-Swiper .swiper-wrapper .swiper-slide .poster-info h4 {
+  font-size: 2.5rem;
+}
+#concert .concert-inner .poster-Swiper .swiper-wrapper .swiper-slide .poster-info p {
+  font-size: 1.7rem;
+}
+#concert .concert-inner .poster-Swiper .swiper-wrapper .swiper-slide .poster-info ul {
+  font-size: 1.4rem;
+}
+#Mpyc {
+  background-color: #231815;
+  color: white;
+}
+#Mpyc .Mpyc-inner .title-warp .title-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#Mpyc .Mpyc-inner .title-warp .title-text h2 {
+  font-size: 120px;
+}
+#Mpyc .Mpyc-inner .title-warp .title-text p {
+  font-size: 20px;
+}
+#Mpyc .Mpyc-inner .title-warp .title-text a {
+  position: relative;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+#Mpyc .Mpyc-inner .title-warp .title-text a ::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: url("../images/scroll_arrow.svg ") no-repeat center;
+  background-size: cover;
 }

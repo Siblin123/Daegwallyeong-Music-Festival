@@ -1,0 +1,58 @@
+#concert {
+  margin-top: 80px;
+  border: 1px solid #000;
+}
+#concert .concert-inner .title-box h3 {
+  font-size: 120px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+#concert .concert-inner .flex-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 45px;
+}
+#concert .concert-inner .flex-box .data p {
+  font-size: 64px;
+}
+#concert .concert-inner .flex-box .all-day {
+  width: 100px;
+  height: 60px;
+}
+#concert .concert-inner .flex-box .all-day a {
+  font-size: 16px;
+}
+#concert .concert-inner .poster-Swiper .swiper-wrapper .swiper-slide {
+  width: auto;
+}
+#concert .concert-inner .poster-Swiper .swiper-wrapper .swiper-slide .poster-img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+#concert .concert-inner .poster-Swiper .swiper-wrapper .swiper-slide .poster-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+#concert .concert-inner .poster-Swiper .swiper-wrapper .swiper-slide .poster-info {
+  padding: 1rem;
+}
+#concert .concert-inner .poster-Swiper .swiper-wrapper .swiper-slide .poster-info h4 {
+  font-size: 2.5rem;
+}
+#concert .concert-inner .poster-Swiper .swiper-wrapper .swiper-slide .poster-info p {
+  font-size: 1.7rem;
+}
+#concert .concert-inner .poster-Swiper .swiper-wrapper .swiper-slide .poster-info ul {
+  font-size: 1.4rem;
+}
