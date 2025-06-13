@@ -1,6 +1,9 @@
 #header {
   position: fixed;
   z-index: 9999999;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 #header .header-inner {
   height: 80px;
@@ -61,6 +64,9 @@
 }
 #header .header-inner .flex-box .right button {
   padding: 10px;
+  border: none;
+  background: none;
+  font-size: 20px;
 }
 #search {
   width: 100%;

@@ -1,0 +1,36 @@
+#logo-warp {
+  margin-bottom: 100px;
+  display: flex;
+  overflow: hidden;
+  .orign {
+    animation: slideLeft 30s linear infinite;
+    display: flex;
+    gap: 90px;
+    li {
+      img {
+        // 이미지 스타일 정의
+        z-index: 10;
+      }
+    }
+  }
+  
+  .copy {
+    animation: slideLeft 30s linear infinite;
+    display: flex;
+    gap: 90px;
+    li {
+
+      img {
+        // 이미지 스타일 정의
+      }
+    }
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

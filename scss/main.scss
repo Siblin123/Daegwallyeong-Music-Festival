@@ -1,0 +1,23 @@
+article {
+  .cursor {
+    span {
+      // "More" 텍스트 스타일링
+    }
+  }
+
+  .visual {
+    .visual-box-pc {
+      .slider-controller-warps {
+        button {
+          // 왼쪽/오른쪽 버튼 스타일링
+        }
+
+        .progress-container {
+          .progress-bar {
+            // 프로그레스 바 스타일링
+          }
+        }
+      }
+    }
+  }
+}

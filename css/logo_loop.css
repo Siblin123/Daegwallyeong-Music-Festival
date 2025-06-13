@@ -1,0 +1,46 @@
+#logo-warp {
+  margin-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+#logo-warp .orign {
+  -webkit-animation: slideLeft 30s linear infinite;
+          animation: slideLeft 30s linear infinite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 90px;
+}
+#logo-warp .orign li img {
+  z-index: 10;
+}
+#logo-warp .copy {
+  -webkit-animation: slideLeft 30s linear infinite;
+          animation: slideLeft 30s linear infinite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 90px;
+}
+@-webkit-keyframes slideLeft {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+@keyframes slideLeft {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}

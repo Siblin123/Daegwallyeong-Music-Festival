@@ -1,0 +1,49 @@
+@import "common";
+#Mpyc {
+  background-color: #231815;
+  height: 120vh;
+  color: white;
+  .Mpyc-inner {
+   
+    .title-warp {
+      .title-text {
+        display: flex;
+        align-items: center;
+        h2 {
+          font-size: 100px;
+          margin: 100px 0;
+          padding-right: 80px;
+          
+        }
+        p {
+          margin-top: 30px;
+          padding-right: 80px;
+          font-size: 20px;
+        }
+        a {
+          margin-top: 45px;
+          position: relative;
+          border: 1px solid rgba(255, 255, 255,0.6);
+          color: #fff;
+          width: 130px;
+          height: 130px;
+          border-radius: 50%;
+          @include CircleInArrow; 
+        }
+      }
+    }
+
+    .gallery-warp {
+      width: 100%;
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        li {
+          width: 32.8%;
+          img {width: 100%;}
+        }
+      }
+    }
+  }
+}

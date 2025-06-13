@@ -1,0 +1,66 @@
+#noticeYoutube {
+  margin-bottom: 100px;
+  .noticeYoutube-inner {
+    .flex-box {
+      display: flex;
+      
+      .video {
+        flex: 4;
+
+        h2 {
+          height: 130px;
+          font-size: 50px;
+          line-height: 130px;
+        }
+
+        iframe {}
+      }
+
+      .notice-warps {
+        flex: 6;
+
+        .title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          h2 {
+            font-size: 50px;
+            padding-left:105px ;
+          }
+
+          a {
+            border: 1px solid #000;
+            position: relative;
+            border: 1px solid rgba(0, 0, 0, 0.6);
+            color: rgb(0, 0, 0);
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+           // @include CircleInArrow; // mixin 적용
+          }
+        }
+
+        ul {
+          height: 400px;
+
+          li {
+            display: flex;
+            height: calc(100%/5);
+            align-items: center;
+
+            h6 {
+              flex: 9;
+              padding-left: 105px;
+              font-size: 2rem;
+            }
+
+            span {
+              flex: 1;
+              border: 1px solid red;
+            }
+          }
+        }
+      }
+    }
+  }
+}

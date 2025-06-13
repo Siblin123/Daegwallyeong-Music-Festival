@@ -6,7 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <!-- 스와이퍼 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- 폰트어썸 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -82,13 +87,13 @@
         </div>
         <div class="right">
           <div class="mypage">
-            <button>사람아이콘</button>
+            <button><i class="fa-solid fa-user"></i></button>
           </div>
           <div class="lang">
-            <button>언어아이콘</button>
+            <button><i class="fa-solid fa-globe"></i></button>
           </div>
           <div class="search">
-            <button>돋보기아이콘</button>
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
           </div>
         </div>
       </div>
@@ -140,6 +145,26 @@
 
 
     <div class="visual">
+      <div class="swiper mainVisual_swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      
       <div class="visual-box-pc">
         <div class="slider-controller-warps">
           <button>왼쪽</button>
@@ -150,6 +175,10 @@
         </div>
       </div>
     </div>
+
+ 
+   
+ 
   </article>
 
   <section id="concert">
@@ -309,12 +338,7 @@
 
 
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper(".poster-Swiper", {});
-    </script>
-    <script src="js/swiper_.js"></script>
+
   </section>
 
   <section id="Mpyc">
@@ -325,8 +349,8 @@
           <p>
             명연주자들의 가르침을 통해 <br>
             젊은 음악가들에게 성장의 기회를 제공하는 교육 프로그램 입니다.</p>
+          <a href=""></a>
         </div>
-        <a href=""></a>
       </div>
 
       <div class="gallery-warp">
@@ -347,7 +371,7 @@
       <div class="flex-box">
         <div class="video">
           <h2>Youtuble</h2>
-          <iframe width="100%" height="400" src="https://www.youtube.com/embed/0vdBnXgYz4o?themeRefresh=1"
+          <iframe width="100%" height="350" src="https://www.youtube.com/embed/0vdBnXgYz4o?themeRefresh=1"
             title="롯데월드 아쿠아리움 리뉴얼 영상" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
@@ -356,7 +380,7 @@
         <div class="notice-warps">
           <div class="title">
             <h2>Notice</h2>
-            <a href="">원형-화살표</a>
+            <a href=""></a>
           </div>
           <ul>
             <li>
@@ -435,149 +459,151 @@
 
   <footer id="footer">
     <div class="footer-inner">
-      <div class="item item01">
-        <h2>(재)강원문화재단 대관령음악제운영실</h2>
-        <nav>
-          <ul class="footer-menu-warps">
-            <li>
-              <a href="">
-                공연
-                <ul class="footer-sub-warps">
-                  <li>
-                    <a href="">공연캘린더</a>
-                    <a href="">공연 예매</a>
-                    <a href="">패키지 예매</a>
-                    <a href="">예매 안내사항</a>
-                  </li>
-                </ul>
-              </a>
-            </li>
+      <div class="grid-box">
+        <div class="item item01">
+          <h2>(재)강원문화재단 대관령음악제운영실</h2>
+          <nav>
+            <ul class="footer-menu-warps">
+              <li>
+                <a href="">
+                  공연
+                  <ul class="footer-sub-warps">
+                    <li><a href="">공연캘린더</a></li>
+                    <li><a href="">공연 예매</a></li>
+                    <li><a href="">패키지 예매</a></li>
+                    <li><a href="">예매 안내사항</a></li>
 
-            <li>
-              <a href="">
-                교육
-                <ul class="footer-sub-warps">
-                  <li>
-                    <a href="">시즌 교육프로그램</a>
-                    <a href="">실내악 멘토십 프로그램</a>
-                    <a href="">마스터클래스</a>
-                    <a href="">평창페스티벌오케스트라 참여</a>
-                    <a href="">연중 교육프로그램</a>
-                    <a href="">찾아가는 마스터클래스</a>
-                    <a href="">직업 진로 특강</a>
-                    <a href="">영 아티스트 콘서트</a>
-                  </li>
-                </ul>
-              </a>
-            </li>
+                  </ul>
+                </a>
+              </li>
 
-            <li>
-              <a href="">
-                소식
-                <ul class="footer-sub-warps">
-                  <li>
-                    <a href="">공지사항</a>
-                    <a href="">뉴스</a>
-                  </li>
-                </ul>
-              </a>
-            </li>
+              <li>
+                <a href="">
+                  교육
+                  <ul class="footer-sub-warps">
+                    <li><a href="">시즌 교육프로그램</a></li>
+                    <li><a href="">실내악 멘토십 프로그램</a></li>
+                    <li><a href="">마스터클래스</a></li>
+                    <li><a href="">평창페스티벌오케스트라 참여</a></li>
+                    <li><a href="">연중 교육프로그램</a></li>
+                    <li><a href="">찾아가는 마스터클래스</a></li>
+                    <li><a href="">직업 진로 특강</a></li>
+                    <li><a href="">영 아티스트 콘서트</a></li>
 
-            <li>
-              <a href="">
-                공연
-                <ul class="footer-sub-warps">
-                  <li>
-                    <a href="">소개</a>
-                    <a href="">예술감독</a>
-                    <a href="">조직도</a>
-                    <a href="">후원 및 협력사</a>
-                    <a href="">문의</a>
-                  </li>
-                </ul>
-              </a>
-            </li>
+                  </ul>
+                </a>
+              </li>
 
-            <li>
-              <a href="">
-                아카이브
-                <ul class="footer-sub-warps">
-                  <li>
-                    <a href="">평창대관령음악제</a>
-                    <a href="">기획공연</a>
-                    <a href="">교육사업</a>
-                  </li>
-                </ul>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+              <li>
+                <a href="">
+                  소식
+                  <ul class="footer-sub-warps">
+                    <li><a href="">공지사항</a></li>
+                    <li><a href="">뉴스</a></li>
 
-      <div class="item item02">
-        <button class="top-button"></button>
-        <address>
-          <dl>
-            <dt>ADDRESS</dt>
-            <dd>
-              강원특별자치도 춘천시 안마산로 85, 4층</dd>
-          </dl>
-          <dl>
-            <dt>TEL</dt>
-            <dd>
-              033-240-1364</dd>
-          </dl>
-          <dl>
-            <dt>EMAIL</dt>
-            <dd>
-              op@mpyc.kr</dd>
-          </dl>
-        </address>
-        <div class="policy">
-          <ul>
-            <li>
-              <a href="">이용약관
-              </a>
+                  </ul>
+                </a>
+              </li>
 
-            </li>
-            <li>
-              <a href="">
-                개인정보처리방침
-              </a>
+              <li>
+                <a href="">
+                  공연
+                  <ul class="footer-sub-warps">
+                    <li><a href="">소개</a></li>
+                    <li><a href="">예술감독</a></li>
+                    <li><a href="">조직도</a></li>
+                    <li><a href="">후원 및 협력사</a></li>
+                    <li><a href="">문의</a></li>
+                  </ul>
+                </a>
+              </li>
 
-            </li>
-            <li> <a href="">강원문화재단</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="item item03">
-        <div class="sns">
-          <ul>
-            <li>
-              <a href="">sns1</a>
-            </li>
-            <li>
-              <a href="">sns2</a>
-            </li>
-            <li>
-              <a href="">sns3</a>
-            </li>
-          </ul>
+              <li>
+                <a href="">
+                  아카이브
+                  <ul class="footer-sub-warps">
+                    <li><a href="">평창대관령음악제</a></li>
+                    <li><a href="">기획공연</a></li>
+                    <li><a href="">교육사업</a></li>
+                  </ul>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
 
-        <div class="logo">
-          <a href="">
-            <img src="images/footer_logo.svg" alt="">
-          </a>
-        </div>
-      </div>
+        <div class="item item02">
+          <button class="top-button"></button>
+          <address>
+            <dl>
+              <dt>ADDRESS</dt>
+              <dd>
+                강원특별자치도 춘천시 안마산로 85, 4층</dd>
+            </dl>
+            <dl>
+              <dt>TEL</dt>
+              <dd>
+                033-240-1364</dd>
+            </dl>
+            <dl>
+              <dt>EMAIL</dt>
+              <dd>
+                op@mpyc.kr</dd>
+            </dl>
+          </address>
+          <div class="policy">
+            <ul>
+              <li>
+                <a href="">이용약관
+                </a>
 
-      <div class="item item04">
-        <p class="copyright">Copyright (c) Music in PyeongChang. All right reserved.</p>
+              </li>
+              <li>
+                <a href="">
+                  개인정보처리방침
+                </a>
+
+              </li>
+              <li> <a href="">강원문화재단</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="item item03">
+          <div class="sns">
+            <ul>
+              <li>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="logo">
+            <a href="">
+              <img src="images/footer_logo.svg" alt="">
+            </a>
+          </div>
+        </div>
+
+        <div class="item item04">
+          <p class="copyright">Copyright (c) Music in PyeongChang. All right reserved.</p>
+        </div>
+
       </div>
     </div>
   </footer>
+
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+      <script src="js/swiper_.js"></script>
+
 </body>
 
 

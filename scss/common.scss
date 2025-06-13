@@ -5,12 +5,34 @@
 
 }
 
+body{
+  background-color: #F5F3EC;
+}
+
 ul,li{
   list-style: none;
+}
+
+a{
+  text-decoration: none;
 }
 
 [class*="inner"] {
   width: 1700px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+@mixin CircleInArrow {
+  &::after{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: url("../images/link_arrow.svg") no-repeat center;
+    color: black;
+  }
 }

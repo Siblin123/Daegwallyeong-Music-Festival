@@ -1,0 +1,168 @@
+
+#footer {
+  background-color: #121212;
+
+  .footer-inner {
+    .grid-box {
+      display: grid;
+      grid-template-areas:
+        "item01 item02"
+        "item04 item03";
+
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto;
+
+      .item {
+        color: white;
+
+        &.item01 {
+          grid-area: item01;
+          padding: 115px 30px 60px 0;
+          h2{
+            margin-bottom: 70px;
+          }
+          nav {
+            .footer-menu-warps {
+             display: flex;
+             gap: 35px;
+             >li {
+              
+               >a {
+                  font-weight: bold;
+                  font-size: 1.2rem;
+                }
+                >ul {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 10px;
+                  margin-top: 10px;
+                  >li {
+                    >a {
+
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.item02 {
+          position: relative;
+          grid-area: item02;
+          padding: 115px 50px 60px 70px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          border-left: 1px solid rgba(255, 255, 255, 0.6);
+
+          .top-button {
+            position: absolute;
+            border: none;
+            background: none;
+            color: white;
+            right: 0;
+            top: 40%;
+            transform: rotate(90deg);
+            font-size: 14px;
+          
+            &::before {
+              content: "SCROLL TO TOP";
+              position: absolute;
+              right: -80px; // 화살표와 글자가 겹치지 않도록 조정
+              top: 50%;
+              color: white;
+              font-size: 14px;
+              width: 150px;
+            }
+          
+            &::after {
+              content: "";
+              position: absolute;
+              right: 61px;
+              top: 50%;
+              transform: translateY(-25%) rotate(180deg);
+              background: url(../images/link_arrow.svg) no-repeat center;
+              background-size: contain;
+              width: 30px;
+              height: 30px;
+            }
+          }
+          address {
+            margin-bottom: 100px;
+
+            dl {
+              display: flex;
+              margin-bottom: 10px;
+              dt {
+                width: 100px;
+              }
+
+              dd {}
+            }
+          }
+
+          .policy {
+            ul {
+              display: flex;
+              
+              li {
+                a {padding: 14px 7px;}
+              }
+            }
+          }
+        }
+
+        &.item03 {
+          grid-area: item03;
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 50px 0 50px 70px;
+          border-left: 1px solid rgba(255, 255, 255, 0.6);
+          &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: -120px;
+            border-top: 1px solid  rgba(255, 255, 255, 0.6);
+          }
+          .sns {
+            ul {
+              display: flex;
+              gap: 50px ;
+              li {
+                a {
+                  i{
+                    font-size: 20px;
+                    padding: 10px;
+                  }
+                }
+              }
+            }
+          }
+
+          .logo {
+            a {
+              img {}
+            }
+          }
+        }
+
+        &.item04 {
+          grid-area: item04;
+          display: flex;
+          align-items: center;
+          .copyright {}
+        }
+      }
+    }
+
+  }
+
+  a{
+    color: white;
+  }
+}

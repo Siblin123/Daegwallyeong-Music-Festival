@@ -1,0 +1,72 @@
+#noticeYoutube {
+  margin-bottom: 100px;
+}
+#noticeYoutube .noticeYoutube-inner .flex-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#noticeYoutube .noticeYoutube-inner .flex-box .video {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+#noticeYoutube .noticeYoutube-inner .flex-box .video h2 {
+  height: 130px;
+  font-size: 50px;
+  line-height: 130px;
+}
+#noticeYoutube .noticeYoutube-inner .flex-box .notice-warps {
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+}
+#noticeYoutube .noticeYoutube-inner .flex-box .notice-warps .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#noticeYoutube .noticeYoutube-inner .flex-box .notice-warps .title h2 {
+  font-size: 50px;
+  padding-left: 105px;
+}
+#noticeYoutube .noticeYoutube-inner .flex-box .notice-warps .title a {
+  border: 1px solid #000;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  color: rgb(0, 0, 0);
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+}
+#noticeYoutube .noticeYoutube-inner .flex-box .notice-warps ul {
+  height: 400px;
+}
+#noticeYoutube .noticeYoutube-inner .flex-box .notice-warps ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 20%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#noticeYoutube .noticeYoutube-inner .flex-box .notice-warps ul li h6 {
+  -webkit-box-flex: 9;
+      -ms-flex: 9;
+          flex: 9;
+  padding-left: 105px;
+  font-size: 2rem;
+}
+#noticeYoutube .noticeYoutube-inner .flex-box .notice-warps ul li span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 1px solid red;
+}

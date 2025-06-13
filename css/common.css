@@ -5,8 +5,16 @@
           box-sizing: border-box;
 }
 
+body {
+  background-color: #F5F3EC;
+}
+
 ul, li {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 [class*=inner] {
