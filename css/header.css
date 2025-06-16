@@ -7,6 +7,10 @@
 }
 #header .header-inner {
   height: 80px;
+  max-height: 100px;
+  overflow: hidden;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,7 +26,7 @@
   left: 0;
   width: 100%;
   height: 1px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #ffffff;
 }
 #header .header-inner .flex-box {
   display: -webkit-box;
@@ -49,10 +53,30 @@
   display: -ms-flexbox;
   display: flex;
   padding: 0 20px;
+  gap: 20px;
+}
+#header .header-inner .flex-box .left nav .menu li > a {
+  padding: 10px 20px;
+  color: #ffffff;
+}
+#header .header-inner .flex-box .left nav .menu li .sub-menu-box {
+  position: relative;
 }
 #header .header-inner .flex-box .left nav .menu li .sub-menu-box ul[sub-menu] {
+  position: absolute;
   max-height: 0;
   overflow: hidden;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  background-color: white;
+  left: -50%;
+  top: 40px;
+}
+#header .header-inner .flex-box .left nav .menu li .sub-menu-box ul[sub-menu] li a {
+  display: block;
+  width: 150px;
+  text-align: center;
+  color: #000;
 }
 #header .header-inner .flex-box .right {
   display: -webkit-box;
@@ -61,6 +85,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+#header .header-inner .flex-box .right i {
+  color: white;
 }
 #header .header-inner .flex-box .right button {
   padding: 10px;
@@ -125,4 +152,34 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+@media screen and (max-width: 500px) {
+  #header {
+    width: 100vw;
+  }
+  #header .header-inner {
+    height: 60px;
+  }
+  #header .header-inner .flex-box .left .logo {
+    margin-right: 20px;
+  }
+  #header .header-inner .flex-box .left nav {
+    display: none;
+  }
+  #header .header-inner .flex-box .left nav .menu li > a {
+    padding: 5px 10px;
+  }
+  #header .header-inner .flex-box .left nav .menu li .sub-menu-box ul[sub-menu] {
+    left: -30%;
+  }
+  #header .header-inner .flex-box .right i {
+    font-size: 18px;
+  }
+  #header .header-inner .flex-box .right button {
+    font-size: 16px;
+  }
+  #search .blank .inner {
+    height: 200px;
+  }
 }

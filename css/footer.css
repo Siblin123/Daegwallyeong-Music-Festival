@@ -10,12 +10,18 @@
 #footer .footer-inner .grid-box .item {
   color: white;
 }
+#footer .footer-inner .grid-box .item a {
+  color: white;
+  font-weight: normal;
+  font-family: var(--font-Pretendard);
+}
 #footer .footer-inner .grid-box .item.item01 {
   grid-area: item01;
   padding: 115px 30px 60px 0;
 }
 #footer .footer-inner .grid-box .item.item01 h2 {
   margin-bottom: 70px;
+  font-family: var(--font-Pretendard);
 }
 #footer .footer-inner .grid-box .item.item01 nav .footer-menu-warps {
   display: -webkit-box;
@@ -94,9 +100,16 @@
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 10px;
+  font-family: var(--font-Pretendard);
 }
 #footer .footer-inner .grid-box .item.item02 address dl dt {
   width: 100px;
+  font-family: var(--font-Pretendard);
+  font-style: normal;
+}
+#footer .footer-inner .grid-box .item.item02 address dl dd {
+  font-style: normal;
+  font-family: var(--font-Pretendard);
 }
 #footer .footer-inner .grid-box .item.item02 .policy ul {
   display: -webkit-box;
@@ -150,4 +163,175 @@
 }
 #footer a {
   color: white;
+}
+
+@media screen and (max-width: 500px) {
+  #footer {
+    background-color: #121212;
+  }
+  #footer .footer-inner .grid-box {
+    display: grid;
+    grid-template-areas: "item01 item01" "item02 item02" "item03 item03" "item04 item04";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+  #footer .footer-inner .grid-box .item {
+    color: white;
+  }
+  #footer .footer-inner .grid-box .item a {
+    color: white;
+    font-weight: normal;
+    font-family: var(--font-Pretendard);
+  }
+  #footer .footer-inner .grid-box .item.item01 {
+    grid-area: item01;
+    padding: 0;
+  }
+  #footer .footer-inner .grid-box .item.item01 h2 {
+    margin: 20px 0;
+    font-family: var(--font-Pretendard);
+  }
+  #footer .footer-inner .grid-box .item.item01 nav .footer-menu-warps {
+    display: none;
+  }
+  #footer .footer-inner .grid-box .item.item01 nav .footer-menu-warps > li > a {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  #footer .footer-inner .grid-box .item.item01 nav .footer-menu-warps > li > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  #footer .footer-inner .grid-box .item.item02 {
+    position: relative;
+    grid-area: item02;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border: none;
+  }
+  #footer .footer-inner .grid-box .item.item02 .top-button {
+    position: absolute;
+    border: none;
+    background: none;
+    color: white;
+    right: 0;
+    top: 20%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    font-size: 14px;
+  }
+  #footer .footer-inner .grid-box .item.item02 .top-button::before {
+    content: "SCROLL TO TOP";
+    position: absolute;
+    right: -80px;
+    top: 30%;
+    color: white;
+    font-size: 14px;
+    width: 150px;
+  }
+  #footer .footer-inner .grid-box .item.item02 .top-button::after {
+    content: "";
+    position: absolute;
+    right: 61px;
+    top: 50%;
+    -webkit-transform: translateY(-25%) rotate(180deg);
+            transform: translateY(-25%) rotate(180deg);
+    background: url(../images/link_arrow.svg) no-repeat center;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+  }
+  #footer .footer-inner .grid-box .item.item02 address {
+    margin-bottom: 0px;
+  }
+  #footer .footer-inner .grid-box .item.item02 address dl {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 10px;
+    font-family: var(--font-Pretendard);
+  }
+  #footer .footer-inner .grid-box .item.item02 address dl dt {
+    width: 100px;
+    font-family: var(--font-Pretendard);
+    font-style: normal;
+  }
+  #footer .footer-inner .grid-box .item.item02 address dl dd {
+    font-style: normal;
+    font-family: var(--font-Pretendard);
+  }
+  #footer .footer-inner .grid-box .item.item02 .policy ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  #footer .footer-inner .grid-box .item.item02 .policy ul li a {
+    padding: 14px 7px;
+  }
+  #footer .footer-inner .grid-box .item.item03 {
+    grid-area: item03;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 20px 0;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.462745098);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.462745098);
+  }
+  #footer .footer-inner .grid-box .item.item03::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 57%;
+    height: 100%;
+    width: 1px;
+    border-right: 1px solid rgba(255, 255, 255, 0.462745098);
+  }
+  #footer .footer-inner .grid-box .item.item03 .sns ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 50px;
+  }
+  #footer .footer-inner .grid-box .item.item03 .sns ul li a i {
+    font-size: 20px;
+    padding: 10px;
+  }
+  #footer .footer-inner .grid-box .item.item04 {
+    grid-area: item04;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 20px 0;
+  }
+  #footer a {
+    color: white;
+  }
 }

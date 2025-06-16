@@ -1,15 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Nanum+Myeongjo&display=swap");
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-Cormorant: "Cormorant", serif;
+  --font-NanumMyeongjo: "Nanum Myeongjo", serif;
+  --font-Pretendard: "Pretendard-Regular", sans-serif;
+}
+
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Nanum Myeongjo", serif;
 }
 
 body {
   background-color: #F5F3EC;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
 }
 
@@ -23,10 +43,18 @@ a {
   padding: 0 20px;
 }
 
+@media screen and (max-width: 500px) {
+  [class*=inner] {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
 #Mpyc {
   background-color: #231815;
   height: 120vh;
   color: white;
+  margin-bottom: 120px;
 }
 #Mpyc .Mpyc-inner .title-warp .title-text {
   display: -webkit-box;
@@ -83,4 +111,70 @@ a {
 }
 #Mpyc .Mpyc-inner .gallery-warp ul li img {
   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  #Mpyc {
+    background-color: #231815;
+    height: 105vh;
+    color: white;
+    margin-bottom: 120px;
+  }
+  #Mpyc .Mpyc-inner .title-warp .title-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #Mpyc .Mpyc-inner .title-warp .title-text h2 {
+    font-size: 60px;
+    margin: 20px 0;
+  }
+  #Mpyc .Mpyc-inner .title-warp .title-text p {
+    padding-right: 80px;
+    font-size: 20px;
+  }
+  #Mpyc .Mpyc-inner .title-warp .title-text a {
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: #fff;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+  }
+  #Mpyc .Mpyc-inner .title-warp .title-text a::after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background: url("../images/link_arrow.svg") no-repeat center;
+    color: black;
+  }
+  #Mpyc .Mpyc-inner .gallery-warp {
+    width: 100%;
+  }
+  #Mpyc .Mpyc-inner .gallery-warp ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 10px;
+  }
+  #Mpyc .Mpyc-inner .gallery-warp ul li {
+    width: 48%;
+  }
+  #Mpyc .Mpyc-inner .gallery-warp ul li img {
+    width: 100%;
+  }
 }

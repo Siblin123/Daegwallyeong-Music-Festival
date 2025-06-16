@@ -3,8 +3,13 @@
   z-index: 9999999;
   left: 50%;
   transform: translateX(-50%);
+
   .header-inner {
     height: 80px;
+    max-height: 100px;
+    overflow: hidden;
+    transition: 0.8s;
+
     position: relative;
     display: flex;
     align-items: center;
@@ -16,7 +21,7 @@
       left: 0;
       width: 100%;
       height: 1px;
-      border-bottom: 1px solid #000;
+      border-bottom: 1px solid #ffffff;
     }
 
     .flex-box {
@@ -40,17 +45,34 @@
           .menu {
             display: flex;
             padding: 0 20px;
+            gap: 20px;
 
             li {
-              a {}
+              >a {
+                padding: 10px 20px;
+                color: #ffffff;
+              }
 
               .sub-menu-box {
+                position: relative;
+
                 ul[sub-menu] {
+                  position: absolute;
                   max-height: 0;
                   overflow: hidden;
+                  transition: 0.8s;
+                  background-color: white;
+                  left: -50%;
+                  top: 40px;
 
                   li {
-                    a {}
+
+                    a {
+                      display: block;
+                      width: 150px;
+                      text-align: center;
+                      color: #000;
+                    }
                   }
                 }
               }
@@ -62,6 +84,10 @@
       .right {
         display: flex;
         align-items: center;
+
+        i {
+          color: white;
+        }
 
         button {
           padding: 10px;
@@ -105,6 +131,7 @@
         max-height: 300px;
         overflow: visible;
       }
+
       .searchform {
         .search-inner {
 
@@ -145,4 +172,53 @@
       }
     }
   }
+}
+
+@media screen and (max-width: 500px) {
+  #header {
+    width: 100vw;
+    .header-inner {
+      height: 60px;
+
+      .flex-box {
+        .left {
+          .logo {
+            margin-right: 20px;
+          }
+
+          nav {
+            display: none;
+            .menu {
+              li {
+                >a {
+                  padding: 5px 10px;
+                }
+
+                .sub-menu-box {
+                  ul[sub-menu] {
+                    left: -30%;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .right {
+          i {
+            font-size: 18px;
+          }
+
+          button {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  #search .blank .inner {
+    height: 200px;
+  }
+  
 }
