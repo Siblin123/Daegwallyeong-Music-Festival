@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 @font-face {
   font-family: "Pretendard-Regular";
   src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
@@ -14,6 +15,7 @@ html {
   --font-Cormorant: "Cormorant", serif;
   --font-NanumMyeongjo: "Nanum Myeongjo", serif;
   --font-Pretendard: "Pretendard-Regular", sans-serif;
+  --font-NotoSans: "Noto Sans KR", sans-serif;
 }
 
 * {
@@ -35,6 +37,11 @@ li {
 
 a {
   text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
 }
 
 [class*=inner] {

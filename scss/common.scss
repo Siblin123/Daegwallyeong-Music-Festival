@@ -12,6 +12,9 @@
   font-style: normal;
 }
 
+// font-family: "Noto Sans KR", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
 html{
   scroll-behavior: smooth;
 }
@@ -22,6 +25,7 @@ html{
   --font-Cormorant: "Cormorant", serif;
   --font-NanumMyeongjo: "Nanum Myeongjo", serif;
   --font-Pretendard: 'Pretendard-Regular', sans-serif;
+  --font-NotoSans: "Noto Sans KR", sans-serif;
 }
 
 * {
@@ -42,6 +46,12 @@ li {
 
 a {
   text-decoration: none;
+  cursor: pointer;
+
+}
+
+button{
+  cursor: pointer;
 }
 
 [class*="inner"] {

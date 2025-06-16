@@ -16,12 +16,69 @@ headerNav.forEach((item) => {
   });
 });
 
+
+//모바일 헤더
+let mobileMenu = document.querySelector('.mobile-menu');
+
+if (mobileMenu && getComputedStyle(mobileMenu).display === 'block') {
+  // 마우스 휠 이벤트 비활성화
+  window.addEventListener('wheel', preventScroll, { passive: false });
+} else {
+  // 다시 스크롤 가능하게 만들기
+  window.removeEventListener('wheel', preventScroll, { passive: true });
+}
+
+function preventScroll(e) {
+  e.preventDefault();
+}
+
+
+let mobile_menu_li = document.querySelectorAll('.mobile-menu > li');
+
+mobile_menu_li.forEach(function(mobile_m) {
+  mobile_m.addEventListener('click', function(e) {
+    e.preventDefault(); // 링크 이동 방지 (선택사항)
+
+
+    let menu =mobile_m.querySelector(".mobile-menu .mobile-sub-menu-box");
+    console.log(menu);
+    if (menu) {
+      if (menu.style.maxHeight === "0px" || menu.style.maxHeight === "") {
+        menu.style.maxHeight = "300px";
+      } else {
+        menu.style.maxHeight = "0px";
+      }
+    }
+
+  });
+});
+
+//모바일 헤더 닫기
+let close_btn = document.querySelector(".close-btn");
+let mobileMenu_NAV = document.querySelector('.mobile-menu-Nav');
+
+close_btn.addEventListener("click", function () {
+  console.log("zmfflr");
+  if (mobileMenu_NAV.style.display === "none") {
+    mobileMenu_NAV.style.display = "block";  // 보이게
+  } else {
+    mobileMenu_NAV.style.display = "none";   // 숨기기
+  }
+});
+
+mobileMenu.addEventListener("click", function () {
+  if (mobileMenu_NAV.style.display === "none") {
+    mobileMenu_NAV.style.display = "block";  // 보이게
+  } else {
+    mobileMenu_NAV.style.display = "none";   // 숨기기
+  }
+});
+
 let headerInner = document.querySelector('.header-inner');
-let headerInner_text_a = headerInner.querySelectorAll('a');
+let menu_text_a = document.querySelectorAll('.menu > li > a');
+console.log(menu_text_a.length + "@");
 let headerInner_text_i = headerInner.querySelectorAll('i');
 let headerInner_logo = headerInner.querySelector('.logo img');
-console.log(headerInner_text_a);
-console.log(headerInner_text_i);
 let lastScrollTop = 0;
 
 window.addEventListener('scroll', () => {
@@ -30,27 +87,27 @@ window.addEventListener('scroll', () => {
   if (currentScroll > lastScrollTop) {
     // 아래로 스크롤
     headerInner.style.maxHeight = '0';
+    headerInner.style.overflow = "hidden";
   } else {
     // 위로 스크롤
     headerInner.style.maxHeight = '100px';
+    headerInner.style.overflow = "";
 
     if (currentScroll == 0) {
       headerInner.style.backgroundColor = 'transparent';
       headerInner_logo.style.filter = 'invert(0)'; // 로고 색상 변경
-      for (let i = 0; i < headerInner_text_a.length; i++) {
-        headerInner_text_a[i].style.color = 'white';
+      for (let i = 0; i < menu_text_a.length; i++) {
+        menu_text_a[i].style.color = 'white';
       }
       for (let i = 0; i < headerInner_text_i.length; i++) {
         headerInner_text_i[i].style.color = 'white';
       }
-
-
     }
     else {
       headerInner_logo.style.filter = 'invert(1)'; // 로고 
       headerInner.style.backgroundColor = "white";
-      for (let i = 0; i < headerInner_text_a.length; i++) {
-        headerInner_text_a[i].style.color = 'black';
+      for (let i = 0; i < menu_text_a.length; i++) {
+        menu_text_a[i].style.color = 'black';
       }
       for (let i = 0; i < headerInner_text_i.length; i++) {
         headerInner_text_i[i].style.color = 'black';

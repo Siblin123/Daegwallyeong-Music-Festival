@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 @font-face {
   font-family: "Pretendard-Regular";
   src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
@@ -14,6 +15,7 @@ html {
   --font-Cormorant: "Cormorant", serif;
   --font-NanumMyeongjo: "Nanum Myeongjo", serif;
   --font-Pretendard: "Pretendard-Regular", sans-serif;
+  --font-NotoSans: "Noto Sans KR", sans-serif;
 }
 
 * {
@@ -35,6 +37,11 @@ li {
 
 a {
   text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
 }
 
 [class*=inner] {
@@ -86,12 +93,12 @@ article .visual .swiper.mainVisual_swiper .swiper-wrapper .swiper-slide .mainVis
   color: white;
 }
 article .visual .swiper.mainVisual_swiper .swiper-wrapper .swiper-slide .mainVisual-text h2 {
-  font-family: var(--font-Cormorant);
+  font-family: var(--font-Pretendard);
   font-size: 100px;
   padding-bottom: 30px;
 }
 article .visual .swiper.mainVisual_swiper .swiper-wrapper .swiper-slide .mainVisual-text p {
-  font-family: var(--font-Cormorant);
+  font-family: var(--font-Pretendard);
   font-size: 20px;
 }
 article .visual .swiper.mainVisual_swiper .swiper-button-next {
@@ -198,12 +205,12 @@ article .visual .swiper.mainVisual_swiper .swiper-button-slider .animate {
     color: white;
   }
   article .visual .swiper.mainVisual_swiper .swiper-wrapper .swiper-slide .mainVisual-text h2 {
-    font-family: var(--font-Cormorant);
+    font-family: var(--font-Pretendard);
     font-size: 30px;
     padding-bottom: 30px;
   }
   article .visual .swiper.mainVisual_swiper .swiper-wrapper .swiper-slide .mainVisual-text p {
-    font-family: var(--font-Cormorant);
+    font-family: var(--font-Pretendard);
     font-size: 20px;
   }
   article .visual .swiper.mainVisual_swiper .swiper-button-next {
