@@ -37,6 +37,11 @@ li {
 
 a {
   text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
 }
 
 [class*=inner] {
@@ -118,21 +123,19 @@ a {
 @media screen and (max-width: 768px) {
   #Mpyc {
     background-color: #231815;
-    height: 105vh;
+    height: 80vh;
     color: white;
     margin-bottom: 120px;
   }
   #Mpyc .Mpyc-inner .title-warp .title-text {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    position: relative;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   #Mpyc .Mpyc-inner .title-warp .title-text h2 {
     font-size: 60px;
@@ -149,6 +152,9 @@ a {
     width: 130px;
     height: 130px;
     border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
   #Mpyc .Mpyc-inner .title-warp .title-text a::after {
     content: "";

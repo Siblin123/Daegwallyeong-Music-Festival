@@ -18,29 +18,17 @@ headerNav.forEach((item) => {
 
 
 //모바일 헤더
-let mobileMenu = document.querySelector('.mobile-menu');
 
-if (mobileMenu && getComputedStyle(mobileMenu).display === 'block') {
-  // 마우스 휠 이벤트 비활성화
-  window.addEventListener('wheel', preventScroll, { passive: false });
-} else {
-  // 다시 스크롤 가능하게 만들기
-  window.removeEventListener('wheel', preventScroll, { passive: true });
-}
-
-function preventScroll(e) {
-  e.preventDefault();
-}
 
 
 let mobile_menu_li = document.querySelectorAll('.mobile-menu > li');
 
-mobile_menu_li.forEach(function(mobile_m) {
-  mobile_m.addEventListener('click', function(e) {
+mobile_menu_li.forEach(function (mobile_m) {
+  mobile_m.addEventListener('click', function (e) {
     e.preventDefault(); // 링크 이동 방지 (선택사항)
 
 
-    let menu =mobile_m.querySelector(".mobile-menu .mobile-sub-menu-box");
+    let menu = mobile_m.querySelector(".mobile-menu .mobile-sub-menu-box");
     console.log(menu);
     if (menu) {
       if (menu.style.maxHeight === "0px" || menu.style.maxHeight === "") {
@@ -53,31 +41,48 @@ mobile_menu_li.forEach(function(mobile_m) {
   });
 });
 
+let mobileMenu = document.querySelector('.mobile-menu');
 //모바일 헤더 닫기
 let close_btn = document.querySelector(".close-btn");
 let mobileMenu_NAV = document.querySelector('.mobile-menu-Nav');
 
+function preventScroll(e) {
+  e.preventDefault();
+  window.addEventListener('wheel', preventScroll, { passive: false });
+}
+
 close_btn.addEventListener("click", function () {
-  console.log("zmfflr");
   if (mobileMenu_NAV.style.display === "none") {
     mobileMenu_NAV.style.display = "block";  // 보이게
+    console.log("스크롤 막기");
   } else {
     mobileMenu_NAV.style.display = "none";   // 숨기기
+    console.log("스크롤 풀기");
+    window.removeEventListener('wheel', preventScroll, { passive: false });
+
   }
 });
 
 mobileMenu.addEventListener("click", function () {
   if (mobileMenu_NAV.style.display === "none") {
     mobileMenu_NAV.style.display = "block";  // 보이게
+    console.log("스크롤 막기");
+    window.addEventListener('wheel', preventScroll, { passive: false });
+
   } else {
     mobileMenu_NAV.style.display = "none";   // 숨기기
+    console.log("스크롤 풀기");
   }
 });
+
+
+
+
 
 let headerInner = document.querySelector('.header-inner');
 let menu_text_a = document.querySelectorAll('.menu > li > a');
 console.log(menu_text_a.length + "@");
-let headerInner_text_i = headerInner.querySelectorAll('i');
+let headerInner_text_i = headerInner.querySelectorAll('.flex-box i');
 let headerInner_logo = headerInner.querySelector('.logo img');
 let lastScrollTop = 0;
 
@@ -142,39 +147,63 @@ const mainVisual_swiper = new Swiper(".mainVisual_swiper", {
 
 
 //=========================concert======================================
-const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-const today = new Date();
 
-const year = today.getFullYear();
-const month = today.getMonth();
-const date = today.getDate();
+function handleResize() {
+  const width = document.documentElement.clientWidth;
 
-let day_list = document.querySelector('.day-list');
+  if (width >= 500) {
+    console.log("현재 너비는 500px 이상입니다.");
+    create_DayList(9);
+    // 원하는 동작 실행
+  } else {
+    console.log("현재 너비는 500px 미만입니다.");
+    create_DayList(3)
+    // 다른 동작 실행
+  }
+}
 
-for (let i = -9; i <= 9; i++) {
-  const loopDate = new Date(year, month, date + i);
-  const loopYear = loopDate.getFullYear();
-  const loopMonth = loopDate.getMonth() + 1;
-  const loopDay = loopDate.getDate();
-  const weekDay = days[loopDate.getDay()];
+// 처음 로드 시 한번 실행
+handleResize();
 
-  let dayDiv = document.createElement("div");
-  dayDiv.classList.add("day");
+// 창 크기 변경 시마다 실행
+window.addEventListener("resize", handleResize);
 
-  let dayOfWeekSpan = document.createElement("span");
-  dayOfWeekSpan.textContent = weekDay;
+function create_DayList(num) {
+  const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const today = new Date();
 
-  let dateSpan = document.createElement("span");
-  dateSpan.textContent = loopDay;
+  const year = today.getFullYear();
+  const month = today.getMonth();
+  const date = today.getDate();
 
-  if (loopDay == date) {
-    dateSpan.classList.add("today"); // 오늘 날짜에 클래스 추가
+  let day_list = document.querySelector('.day-list');
+  day_list.innerHTML = "";
+  for (let i = -num; i <= num; i++) {
+    const loopDate = new Date(year, month, date + i);
+    const loopYear = loopDate.getFullYear();
+    const loopMonth = loopDate.getMonth() + 1;
+    const loopDay = loopDate.getDate();
+    const weekDay = days[loopDate.getDay()];
+
+    let dayDiv = document.createElement("div");
+    dayDiv.classList.add("day");
+
+    let dayOfWeekSpan = document.createElement("span");
+    dayOfWeekSpan.textContent = weekDay;
+
+    let dateSpan = document.createElement("span");
+    dateSpan.textContent = loopDay;
+
+    if (loopDay == date) {
+      dateSpan.classList.add("today"); // 오늘 날짜에 클래스 추가
+    }
+
+
+    dayDiv.appendChild(dayOfWeekSpan);
+    dayDiv.appendChild(dateSpan);
+    day_list.appendChild(dayDiv);
   }
 
-
-  dayDiv.appendChild(dayOfWeekSpan);
-  dayDiv.appendChild(dateSpan);
-  day_list.appendChild(dayDiv);
 }
 
 
@@ -223,14 +252,66 @@ mainVisual_swiper.on('slideChangeTransitionStart', () => {
   startProgressBar();
 });
 
+//==========================notice-warps==============
+let noticeData = [
+  {
+    h6_data: "[2025 평창대관령음악제] 셔틀버스(유료) 운영 안내",
+    span_data: "2025.06.12",
+    tag_data: "NOTICE"
+  },
+  {
+    h6_data: "[2025 평창대관령음악제] 기자간담회 6월 11일에 열려",
+    span_data: "2025.06.12",
+    tag_data: "NEWS"
+
+  },
+  {
+    h6_data: "[2025 평창대관령음악제] 부대행사 일정 및 티켓오픈 안내",
+    span_data: "2025.06.05",
+    tag_data: "NOTICE"
+
+  },
+  {
+    h6_data: "[2025 대관령아카데미] 시즌 교육프로그램 운영",
+    span_data: "2025.06.05",
+    tag_data: "NOTICE"
+  },
+  {
+    h6_data: "[공고] 2025 평창대관령음악제 자원활동가 모집",
+    span_data: "2025.05.29",
+    tag_data: "NEWS"
+  }
 
 
-///poster-Swiper에 마우스 올리면 커서 변경
-/*
-const cursor = document.querySelector('.cursor');
+];
 
-document.addEventListener('mousemove', (e) => {
-  cursor.style.left = `${e.clientX}px`;
-  cursor.style.top = `${e.clientY}px`;
-});
-*/
+let notice_box = document.querySelector(".notice-box")
+let notice_warps_li = document.querySelectorAll(".notice-box li")
+console.log(notice_warps_li.length + "개입니다");
+for (let i = 0; i < 5; i++) {
+
+  let li_ = document.createElement("li");
+  let tag_ = document.createElement("span");
+  let h2_ = document.createElement("h6");
+  let span_ = document.createElement("span");
+  li_.setAttribute("data-aos", "fade-left");
+  li_.setAttribute("data-aos-duration", `${(i + 1) * 500}`);
+  tag_.classList.add("tag");
+  tag_.innerHTML = noticeData[i].tag_data;
+  h2_.innerHTML = noticeData[i].h6_data;
+  span_.innerHTML = noticeData[i].span_data;
+
+  if (noticeData[i].tag_data=="NOTICE") { 
+    tag_.classList.add("NOTICE")
+  }
+  else if(noticeData[i].tag_data=="NEWS")
+  {
+    tag_.classList.add("NEWS")
+  }
+  
+
+  li_.appendChild(tag_);
+  li_.appendChild(h2_);
+  li_.appendChild(span_);
+  notice_box.appendChild(li_);
+}

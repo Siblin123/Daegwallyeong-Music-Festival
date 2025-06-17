@@ -62,7 +62,7 @@
 @media screen and (max-width: 768px) {
   #Mpyc {
     background-color: #231815;
-    height: 105vh;
+    height: 80vh;
     color: white;
     margin-bottom: 120px;
 
@@ -70,9 +70,9 @@
 
       .title-warp {
         .title-text {
-          display: flex;
+          position: relative;
           flex-direction: column;
-          align-items: center;
+          align-items: flex-start;
 
           h2 {
             font-size: 60px;
@@ -92,6 +92,9 @@
             height: 130px;
             border-radius: 50%;
             @include CircleInArrow;
+            position: absolute;
+            right: 0;
+            top: 0;
           }
         }
       }

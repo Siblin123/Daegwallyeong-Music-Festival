@@ -240,7 +240,7 @@ button {
     width: 100vw;
   }
   #header .header-inner {
-    height: 60px;
+    height: 80px;
   }
   #header .header-inner .flex-box .left .logo {
     margin-right: 20px;
@@ -417,13 +417,19 @@ button {
 
 @media screen and (max-width: 500px) {
   #concert .concert-inner .flex-box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    position: relative;
+  }
+  #concert .concert-inner .flex-box .all-day {
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
 @font-face {
@@ -548,21 +554,19 @@ button {
 @media screen and (max-width: 768px) {
   #Mpyc {
     background-color: #231815;
-    height: 105vh;
+    height: 80vh;
     color: white;
     margin-bottom: 120px;
   }
   #Mpyc .Mpyc-inner .title-warp .title-text {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    position: relative;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   #Mpyc .Mpyc-inner .title-warp .title-text h2 {
     font-size: 60px;
@@ -579,6 +583,9 @@ button {
     width: 130px;
     height: 130px;
     border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
   #Mpyc .Mpyc-inner .title-warp .title-text a::after {
     content: "";
@@ -688,6 +695,7 @@ button {
   -webkit-box-flex: 6;
       -ms-flex: 6;
           flex: 6;
+  overflow: hidden;
 }
 #noticeYoutube .noticeYoutube-inner .flex-box .notice-warps .title {
   display: -webkit-box;
@@ -766,11 +774,30 @@ button {
       -ms-flex-align: center;
           align-items: center;
 }
+#noticeYoutube .noticeYoutube-inner .flex-box .notice-warps ul li .tag {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 30px;
+  margin-left: 105px;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  height: 25px;
+  line-height: 25px;
+  font-size: 16px;
+}
+#noticeYoutube .noticeYoutube-inner .flex-box .notice-warps ul li .tag.NEWS {
+  background-color: #6B4B43;
+}
+#noticeYoutube .noticeYoutube-inner .flex-box .notice-warps ul li .tag.NOTICE {
+  background-color: black;
+}
 #noticeYoutube .noticeYoutube-inner .flex-box .notice-warps ul li h6 {
-  -webkit-box-flex: 9;
-      -ms-flex: 9;
-          flex: 9;
-  padding-left: 105px;
+  -webkit-box-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
+  padding-left: 10px;
   font-size: 20px;
   font-family: var(--font-Pretendard);
   font-weight: normal;
@@ -887,11 +914,29 @@ button {
         -ms-flex-align: center;
             align-items: center;
   }
-  #noticeYoutube .noticeYoutube-inner .flex-box .notice-warps ul li h6 {
-    -webkit-box-flex: 9;
-        -ms-flex: 9;
-            flex: 9;
-    padding-left: 50px;
+  #noticeYoutube .noticeYoutube-inner .flex-box .notice-warps ul li .tag {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    margin-left: 0;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 14px;
+    padding: 3px 5px;
+    width: 10px;
+    line-height: 16px;
+  }
+  #noticeYoutube .noticeYoutube-inner .flex-box .notice-warps ul li .tag.NEWS {
+    background-color: #6B4B43;
+  }
+  #noticeYoutube .noticeYoutube-inner .flex-box .notice-warps ul li .tag.NOTICE {
+    background-color: black;
+  }
+  #noticeYoutube .noticeYoutube-inner .flex-box .notice-warps ul li .tag h6 {
+    -webkit-box-flex: 7;
+        -ms-flex: 7;
+            flex: 7;
     font-size: 20px;
     font-family: var(--font-Pretendard);
     font-weight: normal;
@@ -899,7 +944,7 @@ button {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  #noticeYoutube .noticeYoutube-inner .flex-box .notice-warps ul li span {
+  #noticeYoutube .noticeYoutube-inner .flex-box .notice-warps ul li .tag span {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
