@@ -213,7 +213,7 @@ function create_DayList(num) {
 var poster_Swiper = new Swiper(".poster-Swiper", {
   loop: true,
   autoplay: {
-    delay: 400000000,
+    delay: 5000,
     disableOnInteraction: false
   },
   grabCursor: true,
