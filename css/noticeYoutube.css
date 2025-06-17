@@ -185,6 +185,9 @@ button {
   font-size: 20px;
   font-family: var(--font-Pretendard);
   font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #noticeYoutube .noticeYoutube-inner .flex-box .notice-warps ul li span {
   -webkit-box-flex: 1;

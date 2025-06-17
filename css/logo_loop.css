@@ -6,8 +6,8 @@
   overflow: hidden;
 }
 #logo-warp .orign {
-  -webkit-animation: slideLeft 30s linear infinite;
-          animation: slideLeft 30s linear infinite;
+  -webkit-animation: slideLeft 60s linear infinite;
+          animation: slideLeft 60s linear infinite;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
