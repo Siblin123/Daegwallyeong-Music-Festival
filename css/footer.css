@@ -1,3 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-Cormorant: "Cormorant", serif;
+  --font-NanumMyeongjo: "Nanum Myeongjo", serif;
+  --font-Pretendard: "Pretendard-Regular", sans-serif;
+  --font-NotoSans: "Noto S  ans KR", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Nanum Myeongjo", serif;
+}
+
+body {
+  background-color: #F5F3EC;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+[class*=inner] {
+  width: 1700px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 500px) {
+  [class*=inner] {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
 #footer {
   background-color: #121212;
 }
@@ -83,14 +142,36 @@
 #footer .footer-inner .grid-box .item.item02 .top-button::after {
   content: "";
   position: absolute;
-  right: 61px;
-  top: 50%;
+  right: 100px;
+  top: -6px;
   -webkit-transform: translateY(-25%) rotate(180deg);
           transform: translateY(-25%) rotate(180deg);
   background: url(../images/link_arrow.svg) no-repeat center;
   background-size: contain;
   width: 30px;
   height: 30px;
+  -webkit-animation: ani-arrow-up-down 1s infinite alternate;
+          animation: ani-arrow-up-down 1s infinite alternate;
+}
+@-webkit-keyframes ani-arrow-up-down {
+  0% {
+    -webkit-transform: translateX(-50%) rotate(180deg);
+            transform: translateX(-50%) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translateX(0%) rotate(180deg);
+            transform: translateX(0%) rotate(180deg);
+  }
+}
+@keyframes ani-arrow-up-down {
+  0% {
+    -webkit-transform: translateX(-50%) rotate(180deg);
+            transform: translateX(-50%) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translateX(0%) rotate(180deg);
+            transform: translateX(0%) rotate(180deg);
+  }
 }
 #footer .footer-inner .grid-box .item.item02 address {
   margin-bottom: 100px;
@@ -248,8 +329,8 @@
   #footer .footer-inner .grid-box .item.item02 .top-button::after {
     content: "";
     position: absolute;
-    right: 61px;
-    top: 50%;
+    right: 100px;
+    top: -6px;
     -webkit-transform: translateY(-25%) rotate(180deg);
             transform: translateY(-25%) rotate(180deg);
     background: url(../images/link_arrow.svg) no-repeat center;

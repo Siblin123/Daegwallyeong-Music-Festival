@@ -39,8 +39,8 @@
             position: relative;
             border: 1px solid rgba(0, 0, 0, 0.6);
             color: rgb(0, 0, 0);
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             @include CircleInArrow; // mixin 적용
 
@@ -168,8 +168,8 @@
               position: relative;
               border: 1px solid rgba(0, 0, 0, 0.6);
               color: rgb(0, 0, 0);
-              width: 100px;
-              height: 100px;
+              width: 50px;
+              height: 50px;
               border-radius: 50%;
               @include CircleInArrow; // mixin 적용
 

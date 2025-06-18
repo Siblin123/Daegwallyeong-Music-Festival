@@ -1,3 +1,5 @@
+@import "common";
+
 #footer {
   background-color: #121212;
 
@@ -89,13 +91,26 @@
             &::after {
               content: "";
               position: absolute;
-              right: 61px;
-              top: 50%;
+              right: 100px;
+              top: -6px;
               transform: translateY(-25%) rotate(180deg);
               background: url(../images/link_arrow.svg) no-repeat center;
               background-size: contain;
               width: 30px;
               height: 30px;
+
+              animation: ani-arrow-up-down 1s infinite alternate;
+
+            }
+          }
+
+          @keyframes ani-arrow-up-down {
+            0% {
+              transform: translateX(-50%) rotate(180deg);
+            }
+
+            100% {
+              transform: translateX(0%) rotate(180deg);
             }
           }
 
@@ -286,15 +301,17 @@
               &::after {
                 content: "";
                 position: absolute;
-                right: 61px;
-                top: 50%;
+                right: 100px;
+                top: -6px;
                 transform: translateY(-25%) rotate(180deg);
                 background: url(../images/link_arrow.svg) no-repeat center;
                 background-size: contain;
                 width: 30px;
                 height: 30px;
+
               }
             }
+
 
             address {
               margin-bottom: 0px;
@@ -383,6 +400,7 @@
             display: flex;
             align-items: center;
             padding: 20px 0;
+
             .copyright {}
           }
         }

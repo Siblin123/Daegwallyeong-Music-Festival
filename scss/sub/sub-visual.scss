@@ -1,0 +1,57 @@
+*{
+  font-style: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.visual {
+  background: url(/sub_Images/concert_bg01.jpg);
+  height: 800px;
+  .text-box {
+    .visual-inner {
+      #lnb {
+        &.lnb1 {
+          ul {
+            position: relative;
+            display: flex;
+            gap: 17px;
+           
+            li {
+              i {}
+              .list-arrow{
+                cursor: pointer;
+              }
+              .other-list {
+                position: absolute;
+                left: 5%;
+                top: 100%;
+                display: flex;
+                flex-direction: column;
+                max-height: 0;
+                transition: .3s;
+                overflow: hidden;
+                &.active{
+                  max-height: 100px;
+                }
+                li {
+               
+                }
+              }
+
+              &:not(:last-child)::after{
+                position: absolute;
+                content: ">";
+              }
+            }
+          }
+        }
+      }
+
+      .text {
+        h2 {
+        }
+      }
+    }
+  }
+}

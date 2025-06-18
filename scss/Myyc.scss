@@ -17,6 +17,7 @@
           font-size: 100px;
           margin: 100px 0;
           padding-right: 80px;
+          font-family: var(--font-Cormorant);
 
         }
 
@@ -24,10 +25,12 @@
           margin-top: 30px;
           padding-right: 80px;
           font-size: 20px;
+          font-family: var(--font-Pretendard);
         }
 
         a {
           margin-top: 45px;
+          margin-left: 235px;
           position: relative;
           border: 1px solid rgba(255, 255, 255, 0.6);
           color: #fff;
@@ -62,7 +65,7 @@
 @media screen and (max-width: 768px) {
   #Mpyc {
     background-color: #231815;
-    height: 80vh;
+    height: 65vh;
     color: white;
     margin-bottom: 120px;
 
@@ -73,28 +76,30 @@
           position: relative;
           flex-direction: column;
           align-items: flex-start;
-
           h2 {
-            font-size: 60px;
+            font-size: 50px;
             margin: 20px 0;
+            padding-right: 0;
           }
 
           p {
-            padding-right: 80px;
-            font-size: 20px;
+            padding-right: 0px;
+            font-size: 17px;
+            margin: 0;
+            margin-bottom: 20px;
           }
 
           a {
             position: relative;
             border: 1px solid rgba(255, 255, 255, 0.6);
             color: #fff;
-            width: 130px;
-            height: 130px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             @include CircleInArrow;
             position: absolute;
             right: 0;
-            top: 0;
+            top: -23px;
           }
         }
       }

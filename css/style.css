@@ -10,6 +10,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Nanum+Myeongjo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 @font-face {
   font-family: "Pretendard-Regular";
   src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
@@ -24,7 +33,63 @@ html {
   --font-Cormorant: "Cormorant", serif;
   --font-NanumMyeongjo: "Nanum Myeongjo", serif;
   --font-Pretendard: "Pretendard-Regular", sans-serif;
-  --font-NotoSans: "Noto Sans KR", sans-serif;
+  --font-NotoSans: "Noto S  ans KR", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Nanum Myeongjo", serif;
+}
+
+body {
+  background-color: #F5F3EC;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+[class*=inner] {
+  width: 1700px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 500px) {
+  [class*=inner] {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-Cormorant: "Cormorant", serif;
+  --font-NanumMyeongjo: "Nanum Myeongjo", serif;
+  --font-Pretendard: "Pretendard-Regular", sans-serif;
+  --font-NotoSans: "Noto S  ans KR", sans-serif;
 }
 
 * {
@@ -126,6 +191,8 @@ button {
   display: flex;
   padding: 0 20px;
   gap: 20px;
+  font-family: var(--font-NotoSans);
+  font-weight: 700;
 }
 #header .header-inner .flex-box .left nav .menu li > a {
   padding: 10px 20px;
@@ -189,6 +256,8 @@ button {
           align-items: center;
   padding: 0;
   max-height: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   overflow: hidden;
 }
 #search .blank .inner.active {
@@ -212,7 +281,7 @@ button {
 #search .blank .inner .searchform .search-inner .input::after {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: 0px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -225,6 +294,11 @@ button {
       -ms-flex: 9;
           flex: 9;
   border: none;
+  padding: 20px 45px 20px 0;
+  font-size: 20px;
+  background-color: transparent;
+  font-family: var(--font-NotoSans);
+  font-weight: 400;
 }
 #search .blank .inner .searchform .search-inner .input input:focus {
   outline: none;
@@ -233,6 +307,9 @@ button {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 500px) {
@@ -302,8 +379,129 @@ button {
     font-size: 18px;
     color: white;
   }
+  #search {
+    width: 100%;
+  }
   #search .blank .inner {
-    height: 200px;
+    height: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+    max-height: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    overflow: hidden;
+  }
+  #search .blank .inner.active {
+    max-height: 300px;
+    overflow: visible;
+  }
+  #search .blank .inner .searchform .search-inner .input {
+    width: 90vw;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: auto;
+  }
+  #search .blank .inner .searchform .search-inner .input::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #000;
+  }
+  #search .blank .inner .searchform .search-inner .input input {
+    -webkit-box-flex: 9;
+        -ms-flex: 9;
+            flex: 9;
+    border: none;
+    padding: 20px 45px 20px 0;
+    font-size: 20px;
+    background-color: transparent;
+    font-family: var(--font-NotoSans);
+    font-weight: 400;
+  }
+  #search .blank .inner .searchform .search-inner .input input:focus {
+    outline: none;
+  }
+  #search .blank .inner .searchform .search-inner .input button {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+  }
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-Cormorant: "Cormorant", serif;
+  --font-NanumMyeongjo: "Nanum Myeongjo", serif;
+  --font-Pretendard: "Pretendard-Regular", sans-serif;
+  --font-NotoSans: "Noto S  ans KR", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Nanum Myeongjo", serif;
+}
+
+body {
+  background-color: #F5F3EC;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+[class*=inner] {
+  width: 1700px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 500px) {
+  [class*=inner] {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 }
 #concert {
@@ -369,6 +567,7 @@ button {
 #concert .concert-inner .flex-box .all-day a {
   font-size: 16px;
   color: white;
+  font-family: var(--font-Pretendard);
 }
 #concert .concert-inner .poster-Swiper .swiper-wrapper .swiper-slide {
   width: auto;
@@ -410,12 +609,17 @@ button {
 }
 #concert .concert-inner .poster-Swiper .swiper-wrapper .swiper-slide .poster-info ul .place {
   padding: 5px 0;
+  font-family: var(--font-Pretendard);
+  font-weight: normal;
 }
 #concert .concert-inner .poster-Swiper .swiper-wrapper .swiper-slide .poster-info ul .date i {
   font-style: normal;
 }
 
 @media screen and (max-width: 500px) {
+  #concert .concert-inner .title-box h3 {
+    font-size: 50px;
+  }
   #concert .concert-inner .flex-box {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -426,10 +630,17 @@ button {
             align-items: flex-start;
     position: relative;
   }
+  #concert .concert-inner .flex-box .data p {
+    font-size: 30px;
+  }
+  #concert .concert-inner .flex-box .day-warps {
+    margin-top: 20px;
+  }
   #concert .concert-inner .flex-box .all-day {
     position: absolute;
     right: 0;
     top: 0;
+    height: 45px;
   }
 }
 @font-face {
@@ -446,7 +657,7 @@ html {
   --font-Cormorant: "Cormorant", serif;
   --font-NanumMyeongjo: "Nanum Myeongjo", serif;
   --font-Pretendard: "Pretendard-Regular", sans-serif;
-  --font-NotoSans: "Noto Sans KR", sans-serif;
+  --font-NotoSans: "Noto S  ans KR", sans-serif;
 }
 
 * {
@@ -506,14 +717,17 @@ button {
   font-size: 100px;
   margin: 100px 0;
   padding-right: 80px;
+  font-family: var(--font-Cormorant);
 }
 #Mpyc .Mpyc-inner .title-warp .title-text p {
   margin-top: 30px;
   padding-right: 80px;
   font-size: 20px;
+  font-family: var(--font-Pretendard);
 }
 #Mpyc .Mpyc-inner .title-warp .title-text a {
   margin-top: 45px;
+  margin-left: 235px;
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.6);
   color: #fff;
@@ -524,12 +738,12 @@ button {
 #Mpyc .Mpyc-inner .title-warp .title-text a::after {
   content: "";
   position: absolute;
-  width: 30%;
-  height: 30%;
+  width: 100%;
+  height: 100%;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%) scale(0.7);
+          transform: translate(-50%, -50%) scale(0.7);
   background: url("../images/link_arrow.svg") no-repeat center;
   color: black;
 }
@@ -554,7 +768,7 @@ button {
 @media screen and (max-width: 768px) {
   #Mpyc {
     background-color: #231815;
-    height: 80vh;
+    height: 65vh;
     color: white;
     margin-bottom: 120px;
   }
@@ -569,33 +783,36 @@ button {
             align-items: flex-start;
   }
   #Mpyc .Mpyc-inner .title-warp .title-text h2 {
-    font-size: 60px;
+    font-size: 50px;
     margin: 20px 0;
+    padding-right: 0;
   }
   #Mpyc .Mpyc-inner .title-warp .title-text p {
-    padding-right: 80px;
-    font-size: 20px;
+    padding-right: 0px;
+    font-size: 17px;
+    margin: 0;
+    margin-bottom: 20px;
   }
   #Mpyc .Mpyc-inner .title-warp .title-text a {
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0.6);
     color: #fff;
-    width: 130px;
-    height: 130px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     position: absolute;
     right: 0;
-    top: 0;
+    top: -23px;
   }
   #Mpyc .Mpyc-inner .title-warp .title-text a::after {
     content: "";
     position: absolute;
-    width: 30%;
-    height: 30%;
+    width: 100%;
+    height: 100%;
     left: 50%;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%) scale(0.7);
+            transform: translate(-50%, -50%) scale(0.7);
     background: url("../images/link_arrow.svg") no-repeat center;
     color: black;
   }
@@ -631,7 +848,7 @@ html {
   --font-Cormorant: "Cormorant", serif;
   --font-NanumMyeongjo: "Nanum Myeongjo", serif;
   --font-Pretendard: "Pretendard-Regular", sans-serif;
-  --font-NotoSans: "Noto Sans KR", sans-serif;
+  --font-NotoSans: "Noto S  ans KR", sans-serif;
 }
 
 * {
@@ -718,19 +935,19 @@ button {
   position: relative;
   border: 1px solid rgba(0, 0, 0, 0.6);
   color: rgb(0, 0, 0);
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
 }
 #noticeYoutube .noticeYoutube-inner .flex-box .notice-warps .title a::after {
   content: "";
   position: absolute;
-  width: 30%;
-  height: 30%;
+  width: 100%;
+  height: 100%;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%) scale(0.7);
+          transform: translate(-50%, -50%) scale(0.7);
   background: url("../images/link_arrow.svg") no-repeat center;
   color: black;
 }
@@ -861,19 +1078,19 @@ button {
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.6);
     color: rgb(0, 0, 0);
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
   }
   #noticeYoutube .noticeYoutube-inner .flex-box .notice-warps .title a::after {
     content: "";
     position: absolute;
-    width: 30%;
-    height: 30%;
+    width: 100%;
+    height: 100%;
     left: 50%;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%) scale(0.7);
+            transform: translate(-50%, -50%) scale(0.7);
     background: url("../images/link_arrow.svg") no-repeat center;
     color: black;
   }
@@ -1014,7 +1231,7 @@ html {
   --font-Cormorant: "Cormorant", serif;
   --font-NanumMyeongjo: "Nanum Myeongjo", serif;
   --font-Pretendard: "Pretendard-Regular", sans-serif;
-  --font-NotoSans: "Noto Sans KR", sans-serif;
+  --font-NotoSans: "Noto S  ans KR", sans-serif;
 }
 
 * {
@@ -1065,6 +1282,67 @@ article .cursor {
   pointer-events: none;
   z-index: 9999;
 }
+article .visual {
+  position: relative;
+  overflow: hidden;
+}
+article .visual .deco {
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+  width: 100px;
+  height: 100px;
+  z-index: 1000;
+}
+article .visual .deco > img {
+  position: absolute;
+  bottom: 0px;
+  right: -12px;
+  -webkit-animation: ani-arrow 1s infinite alternate;
+          animation: ani-arrow 1s infinite alternate;
+}
+@-webkit-keyframes ani-arrow {
+  0% {
+    -webkit-transform: translateY(-50%) rotate(90deg);
+            transform: translateY(-50%) rotate(90deg);
+  }
+  100% {
+    -webkit-transform: translateY(0%) rotate(90deg);
+            transform: translateY(0%) rotate(90deg);
+  }
+}
+@keyframes ani-arrow {
+  0% {
+    -webkit-transform: translateY(-50%) rotate(90deg);
+            transform: translateY(-50%) rotate(90deg);
+  }
+  100% {
+    -webkit-transform: translateY(0%) rotate(90deg);
+            transform: translateY(0%) rotate(90deg);
+  }
+}
+article .visual .deco .deco_ani img {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-animation: Rotation 8s linear infinite;
+          animation: Rotation 8s linear infinite;
+}
+@-webkit-keyframes Rotation {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+@keyframes Rotation {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
 article .visual .swiper.mainVisual_swiper {
   width: 100%;
   height: 100vh;
@@ -1088,7 +1366,7 @@ article .visual .swiper.mainVisual_swiper .swiper-wrapper .swiper-slide .mainVis
   bottom: 15%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  z-index: 9999;
+  z-index: 999;
   color: white;
 }
 article .visual .swiper.mainVisual_swiper .swiper-wrapper .swiper-slide .mainVisual-text h2 {
@@ -1112,12 +1390,12 @@ article .visual .swiper.mainVisual_swiper .swiper-button-next {
 article .visual .swiper.mainVisual_swiper .swiper-button-next::after {
   content: "";
   position: absolute;
-  width: 30%;
-  height: 30%;
+  width: 100%;
+  height: 100%;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%) scale(0.7);
+          transform: translate(-50%, -50%) scale(0.7);
   background: url("../images/link_arrow.svg") no-repeat center;
   color: black;
 }
@@ -1135,12 +1413,12 @@ article .visual .swiper.mainVisual_swiper .swiper-button-prev {
 article .visual .swiper.mainVisual_swiper .swiper-button-prev::after {
   content: "";
   position: absolute;
-  width: 30%;
-  height: 30%;
+  width: 100%;
+  height: 100%;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%) scale(0.7);
+          transform: translate(-50%, -50%) scale(0.7);
   background: url("../images/link_arrow.svg") no-repeat center;
   color: black;
 }
@@ -1184,6 +1462,67 @@ article .visual .swiper.mainVisual_swiper .swiper-button-slider .animate {
   }
 }
 @media screen and (max-width: 500px) {
+  article .visual .deco {
+    position: absolute;
+    bottom: 35%;
+    right: 50%;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+  }
+  article .visual .deco > img {
+    position: absolute;
+    bottom: -15px;
+    right: -12px;
+    width: 50%;
+    height: 50%;
+    -webkit-animation: ani-arrow 1s infinite alternate;
+            animation: ani-arrow 1s infinite alternate;
+  }
+  @-webkit-keyframes ani-arrow {
+    0% {
+      -webkit-transform: translateY(-50%) rotate(90deg);
+              transform: translateY(-50%) rotate(90deg);
+    }
+    100% {
+      -webkit-transform: translateY(0%) rotate(90deg);
+              transform: translateY(0%) rotate(90deg);
+    }
+  }
+  @keyframes ani-arrow {
+    0% {
+      -webkit-transform: translateY(-50%) rotate(90deg);
+              transform: translateY(-50%) rotate(90deg);
+    }
+    100% {
+      -webkit-transform: translateY(0%) rotate(90deg);
+              transform: translateY(0%) rotate(90deg);
+    }
+  }
+  article .visual .deco .deco_ani img {
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation: Rotation 8s linear infinite;
+            animation: Rotation 8s linear infinite;
+    width: 100px;
+    height: 100px;
+  }
+  @-webkit-keyframes Rotation {
+    0% {
+      rotate: 0deg;
+    }
+    100% {
+      rotate: 360deg;
+    }
+  }
+  @keyframes Rotation {
+    0% {
+      rotate: 0deg;
+    }
+    100% {
+      rotate: 360deg;
+    }
+  }
   article .visual .swiper.mainVisual_swiper .swiper-wrapper .swiper-slide {
     width: 100vw;
   }
@@ -1196,7 +1535,7 @@ article .visual .swiper.mainVisual_swiper .swiper-button-slider .animate {
     width: 80%;
     position: absolute;
     left: 50%;
-    bottom: 30%;
+    bottom: 45%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     text-align: center;
@@ -1225,12 +1564,12 @@ article .visual .swiper.mainVisual_swiper .swiper-button-slider .animate {
   article .visual .swiper.mainVisual_swiper .swiper-button-next::after {
     content: "";
     position: absolute;
-    width: 30%;
-    height: 30%;
+    width: 100%;
+    height: 100%;
     left: 50%;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%) scale(0.7);
+            transform: translate(-50%, -50%) scale(0.7);
     background: url("../images/link_arrow.svg") no-repeat center;
     color: black;
   }
@@ -1248,12 +1587,12 @@ article .visual .swiper.mainVisual_swiper .swiper-button-slider .animate {
   article .visual .swiper.mainVisual_swiper .swiper-button-prev::after {
     content: "";
     position: absolute;
-    width: 30%;
-    height: 30%;
+    width: 100%;
+    height: 100%;
     left: 50%;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%) scale(0.7);
+            transform: translate(-50%, -50%) scale(0.7);
     background: url("../images/link_arrow.svg") no-repeat center;
     color: black;
   }
@@ -1295,6 +1634,62 @@ article .visual .swiper.mainVisual_swiper .swiper-button-slider .animate {
     to {
       width: 100%;
     }
+  }
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-Cormorant: "Cormorant", serif;
+  --font-NanumMyeongjo: "Nanum Myeongjo", serif;
+  --font-Pretendard: "Pretendard-Regular", sans-serif;
+  --font-NotoSans: "Noto S  ans KR", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Nanum Myeongjo", serif;
+}
+
+body {
+  background-color: #F5F3EC;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+[class*=inner] {
+  width: 1700px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 500px) {
+  [class*=inner] {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 }
 #footer {
@@ -1382,14 +1777,36 @@ article .visual .swiper.mainVisual_swiper .swiper-button-slider .animate {
 #footer .footer-inner .grid-box .item.item02 .top-button::after {
   content: "";
   position: absolute;
-  right: 61px;
-  top: 50%;
+  right: 100px;
+  top: -6px;
   -webkit-transform: translateY(-25%) rotate(180deg);
           transform: translateY(-25%) rotate(180deg);
   background: url(../images/link_arrow.svg) no-repeat center;
   background-size: contain;
   width: 30px;
   height: 30px;
+  -webkit-animation: ani-arrow-up-down 1s infinite alternate;
+          animation: ani-arrow-up-down 1s infinite alternate;
+}
+@-webkit-keyframes ani-arrow-up-down {
+  0% {
+    -webkit-transform: translateX(-50%) rotate(180deg);
+            transform: translateX(-50%) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translateX(0%) rotate(180deg);
+            transform: translateX(0%) rotate(180deg);
+  }
+}
+@keyframes ani-arrow-up-down {
+  0% {
+    -webkit-transform: translateX(-50%) rotate(180deg);
+            transform: translateX(-50%) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translateX(0%) rotate(180deg);
+            transform: translateX(0%) rotate(180deg);
+  }
 }
 #footer .footer-inner .grid-box .item.item02 address {
   margin-bottom: 100px;
@@ -1547,8 +1964,8 @@ article .visual .swiper.mainVisual_swiper .swiper-button-slider .animate {
   #footer .footer-inner .grid-box .item.item02 .top-button::after {
     content: "";
     position: absolute;
-    right: 61px;
-    top: 50%;
+    right: 100px;
+    top: -6px;
     -webkit-transform: translateY(-25%) rotate(180deg);
             transform: translateY(-25%) rotate(180deg);
     background: url(../images/link_arrow.svg) no-repeat center;

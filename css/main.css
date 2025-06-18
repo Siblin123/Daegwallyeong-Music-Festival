@@ -15,7 +15,7 @@ html {
   --font-Cormorant: "Cormorant", serif;
   --font-NanumMyeongjo: "Nanum Myeongjo", serif;
   --font-Pretendard: "Pretendard-Regular", sans-serif;
-  --font-NotoSans: "Noto Sans KR", sans-serif;
+  --font-NotoSans: "Noto S  ans KR", sans-serif;
 }
 
 * {
@@ -66,6 +66,67 @@ article .cursor {
   pointer-events: none;
   z-index: 9999;
 }
+article .visual {
+  position: relative;
+  overflow: hidden;
+}
+article .visual .deco {
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+  width: 100px;
+  height: 100px;
+  z-index: 1000;
+}
+article .visual .deco > img {
+  position: absolute;
+  bottom: 0px;
+  right: -12px;
+  -webkit-animation: ani-arrow 1s infinite alternate;
+          animation: ani-arrow 1s infinite alternate;
+}
+@-webkit-keyframes ani-arrow {
+  0% {
+    -webkit-transform: translateY(-50%) rotate(90deg);
+            transform: translateY(-50%) rotate(90deg);
+  }
+  100% {
+    -webkit-transform: translateY(0%) rotate(90deg);
+            transform: translateY(0%) rotate(90deg);
+  }
+}
+@keyframes ani-arrow {
+  0% {
+    -webkit-transform: translateY(-50%) rotate(90deg);
+            transform: translateY(-50%) rotate(90deg);
+  }
+  100% {
+    -webkit-transform: translateY(0%) rotate(90deg);
+            transform: translateY(0%) rotate(90deg);
+  }
+}
+article .visual .deco .deco_ani img {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-animation: Rotation 8s linear infinite;
+          animation: Rotation 8s linear infinite;
+}
+@-webkit-keyframes Rotation {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+@keyframes Rotation {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
 article .visual .swiper.mainVisual_swiper {
   width: 100%;
   height: 100vh;
@@ -89,7 +150,7 @@ article .visual .swiper.mainVisual_swiper .swiper-wrapper .swiper-slide .mainVis
   bottom: 15%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  z-index: 9999;
+  z-index: 999;
   color: white;
 }
 article .visual .swiper.mainVisual_swiper .swiper-wrapper .swiper-slide .mainVisual-text h2 {
@@ -113,12 +174,12 @@ article .visual .swiper.mainVisual_swiper .swiper-button-next {
 article .visual .swiper.mainVisual_swiper .swiper-button-next::after {
   content: "";
   position: absolute;
-  width: 30%;
-  height: 30%;
+  width: 100%;
+  height: 100%;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%) scale(0.7);
+          transform: translate(-50%, -50%) scale(0.7);
   background: url("../images/link_arrow.svg") no-repeat center;
   color: black;
 }
@@ -136,12 +197,12 @@ article .visual .swiper.mainVisual_swiper .swiper-button-prev {
 article .visual .swiper.mainVisual_swiper .swiper-button-prev::after {
   content: "";
   position: absolute;
-  width: 30%;
-  height: 30%;
+  width: 100%;
+  height: 100%;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%) scale(0.7);
+          transform: translate(-50%, -50%) scale(0.7);
   background: url("../images/link_arrow.svg") no-repeat center;
   color: black;
 }
@@ -185,6 +246,67 @@ article .visual .swiper.mainVisual_swiper .swiper-button-slider .animate {
   }
 }
 @media screen and (max-width: 500px) {
+  article .visual .deco {
+    position: absolute;
+    bottom: 35%;
+    right: 50%;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+  }
+  article .visual .deco > img {
+    position: absolute;
+    bottom: -15px;
+    right: -12px;
+    width: 50%;
+    height: 50%;
+    -webkit-animation: ani-arrow 1s infinite alternate;
+            animation: ani-arrow 1s infinite alternate;
+  }
+  @-webkit-keyframes ani-arrow {
+    0% {
+      -webkit-transform: translateY(-50%) rotate(90deg);
+              transform: translateY(-50%) rotate(90deg);
+    }
+    100% {
+      -webkit-transform: translateY(0%) rotate(90deg);
+              transform: translateY(0%) rotate(90deg);
+    }
+  }
+  @keyframes ani-arrow {
+    0% {
+      -webkit-transform: translateY(-50%) rotate(90deg);
+              transform: translateY(-50%) rotate(90deg);
+    }
+    100% {
+      -webkit-transform: translateY(0%) rotate(90deg);
+              transform: translateY(0%) rotate(90deg);
+    }
+  }
+  article .visual .deco .deco_ani img {
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation: Rotation 8s linear infinite;
+            animation: Rotation 8s linear infinite;
+    width: 100px;
+    height: 100px;
+  }
+  @-webkit-keyframes Rotation {
+    0% {
+      rotate: 0deg;
+    }
+    100% {
+      rotate: 360deg;
+    }
+  }
+  @keyframes Rotation {
+    0% {
+      rotate: 0deg;
+    }
+    100% {
+      rotate: 360deg;
+    }
+  }
   article .visual .swiper.mainVisual_swiper .swiper-wrapper .swiper-slide {
     width: 100vw;
   }
@@ -197,7 +319,7 @@ article .visual .swiper.mainVisual_swiper .swiper-button-slider .animate {
     width: 80%;
     position: absolute;
     left: 50%;
-    bottom: 30%;
+    bottom: 45%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     text-align: center;
@@ -226,12 +348,12 @@ article .visual .swiper.mainVisual_swiper .swiper-button-slider .animate {
   article .visual .swiper.mainVisual_swiper .swiper-button-next::after {
     content: "";
     position: absolute;
-    width: 30%;
-    height: 30%;
+    width: 100%;
+    height: 100%;
     left: 50%;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%) scale(0.7);
+            transform: translate(-50%, -50%) scale(0.7);
     background: url("../images/link_arrow.svg") no-repeat center;
     color: black;
   }
@@ -249,12 +371,12 @@ article .visual .swiper.mainVisual_swiper .swiper-button-slider .animate {
   article .visual .swiper.mainVisual_swiper .swiper-button-prev::after {
     content: "";
     position: absolute;
-    width: 30%;
-    height: 30%;
+    width: 100%;
+    height: 100%;
     left: 50%;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%) scale(0.7);
+            transform: translate(-50%, -50%) scale(0.7);
     background: url("../images/link_arrow.svg") no-repeat center;
     color: black;
   }

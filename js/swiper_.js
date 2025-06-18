@@ -93,6 +93,7 @@ window.addEventListener('scroll', () => {
     // 아래로 스크롤
     headerInner.style.maxHeight = '0';
     headerInner.style.overflow = "hidden";
+    search_icon_inner.classList.remove("active");
   } else {
     // 위로 스크롤
     headerInner.style.maxHeight = '100px';
@@ -125,6 +126,38 @@ window.addEventListener('scroll', () => {
   lastScrollTop = currentScroll;
 });
 
+//=================================해더 끝
+
+let search_icon = document.querySelector(".search-icon");
+let search_icon_inner = document.getElementById("search").querySelector(".inner");
+
+search_icon.addEventListener("click",()=>{
+  
+  search_icon_inner.classList.toggle("active");
+
+  if (!search_icon_inner.classList.contains("active")) {
+    headerInner.style.backgroundColor = 'transparent';
+    headerInner_logo.style.filter = 'invert(0)'; // 로고 색상 변경
+    for (let i = 0; i < menu_text_a.length; i++) {
+      menu_text_a[i].style.color = 'white';
+    }
+    for (let i = 0; i < headerInner_text_i.length; i++) {
+      headerInner_text_i[i].style.color = 'white';
+    }
+  }
+  else {
+    headerInner_logo.style.filter = 'invert(1)'; // 로고 
+    headerInner.style.backgroundColor = "white";
+    for (let i = 0; i < menu_text_a.length; i++) {
+      menu_text_a[i].style.color = 'black';
+    }
+    for (let i = 0; i < headerInner_text_i.length; i++) {
+      headerInner_text_i[i].style.color = 'black';
+    }
+
+  }
+})
+
 
 
 //=======================메인 자동 스와이퍼====================================
@@ -143,6 +176,8 @@ const mainVisual_swiper = new Swiper(".mainVisual_swiper", {
     prevEl: ".swiper-button-prev",
   },
   allowTouchMove: false,
+
+
 });
 
 
@@ -301,14 +336,13 @@ for (let i = 0; i < 5; i++) {
   h2_.innerHTML = noticeData[i].h6_data;
   span_.innerHTML = noticeData[i].span_data;
 
-  if (noticeData[i].tag_data=="NOTICE") { 
+  if (noticeData[i].tag_data == "NOTICE") {
     tag_.classList.add("NOTICE")
   }
-  else if(noticeData[i].tag_data=="NEWS")
-  {
+  else if (noticeData[i].tag_data == "NEWS") {
     tag_.classList.add("NEWS")
   }
-  
+
 
   li_.appendChild(tag_);
   li_.appendChild(h2_);
