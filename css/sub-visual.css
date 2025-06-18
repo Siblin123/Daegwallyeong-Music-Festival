@@ -1,3 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-Cormorant: "Cormorant", serif;
+  --font-NanumMyeongjo: "Nanum Myeongjo", serif;
+  --font-Pretendard: "Pretendard-Regular", sans-serif;
+  --font-NotoSans: "Noto S  ans KR", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Nanum Myeongjo", serif;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+body {
+  background-color: #F5F3EC;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+[class*=inner] {
+  width: 1700px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 500px) {
+  [class*=inner] {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
 * {
   font-style: none;
   list-style: none;
@@ -6,23 +70,33 @@
 }
 
 .visual {
+  position: relative;
+  height: 666px;
   background: url(/sub_Images/concert_bg01.jpg);
-  height: 800px;
+  background-size: cover;
 }
 .visual .text-box .visual-inner #lnb.lnb1 ul {
-  position: relative;
+  position: absolute;
+  left: 2%;
+  top: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 17px;
+  color: #ffffff;
 }
-.visual .text-box .visual-inner #lnb.lnb1 ul li .list-arrow {
+.visual .text-box .visual-inner #lnb.lnb1 ul > li {
+  position: relative;
+}
+.visual .text-box .visual-inner #lnb.lnb1 ul > li .list-arrow {
   cursor: pointer;
 }
-.visual .text-box .visual-inner #lnb.lnb1 ul li .other-list {
+.visual .text-box .visual-inner #lnb.lnb1 ul > li .other-list {
   position: absolute;
-  left: 5%;
+  left: -270%;
+  width: 120px;
   top: 100%;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,12 +107,86 @@
   max-height: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  background-color: #ffffff;
+  color: black;
   overflow: hidden;
 }
-.visual .text-box .visual-inner #lnb.lnb1 ul li .other-list.active {
-  max-height: 100px;
+.visual .text-box .visual-inner #lnb.lnb1 ul > li .other-list.active {
+  max-height: 300px;
 }
-.visual .text-box .visual-inner #lnb.lnb1 ul li:not(:last-child)::after {
+.visual .text-box .visual-inner #lnb.lnb1 ul > li .other-list li {
+  padding: 10px;
+}
+.visual .text-box .visual-inner #lnb.lnb1 ul > li:not(:last-child)::after {
   position: absolute;
   content: ">";
+}
+.visual .text-box .visual-inner .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.visual .text-box .visual-inner .text h2 {
+  font-size: 120px;
+  color: white;
+  font-family: var(--font-Cormorant);
+}
+
+#schedule {
+  padding: 120px 0 200px 0;
+}
+#schedule .calendar .calendar-inner .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+#schedule .calendar .calendar-inner .date .prev,
+#schedule .calendar .calendar-inner .date .next {
+  font-size: 13px;
+}
+#schedule .calendar .calendar-inner .date p {
+  font-size: 50px;
+}
+#schedule .calendar .calendar-inner .type ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#schedule .calendar .calendar-inner .type ul li {
+  font-size: 15px;
+  font-family: var(--font-Pretendard);
+}
+#schedule .calendar .calendar-inner .table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#schedule .calendar .calendar-inner .table table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 220px;
+  vertical-align: top;
+  text-align: left;
+}
+#schedule .calendar .calendar-inner .table table thead {
+  background-color: #f5f5f5;
+}
+#schedule .calendar .calendar-inner .table table thead th {
+  font-weight: bold;
+  height: 50px;
 }

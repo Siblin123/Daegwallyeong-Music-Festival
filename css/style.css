@@ -44,6 +44,11 @@ html {
   font-family: "Nanum Myeongjo", serif;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+}
+
 body {
   background-color: #F5F3EC;
 }
@@ -98,6 +103,11 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Nanum Myeongjo", serif;
+}
+
+button {
+  border: none;
+  background-color: transparent;
 }
 
 body {
@@ -473,6 +483,11 @@ html {
   font-family: "Nanum Myeongjo", serif;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+}
+
 body {
   background-color: #F5F3EC;
 }
@@ -668,6 +683,11 @@ html {
   font-family: "Nanum Myeongjo", serif;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+}
+
 body {
   background-color: #F5F3EC;
 }
@@ -857,6 +877,11 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Nanum Myeongjo", serif;
+}
+
+button {
+  border: none;
+  background-color: transparent;
 }
 
 body {
@@ -1240,6 +1265,11 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Nanum Myeongjo", serif;
+}
+
+button {
+  border: none;
+  background-color: transparent;
 }
 
 body {
@@ -1659,6 +1689,11 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Nanum Myeongjo", serif;
+}
+
+button {
+  border: none;
+  background-color: transparent;
 }
 
 body {
