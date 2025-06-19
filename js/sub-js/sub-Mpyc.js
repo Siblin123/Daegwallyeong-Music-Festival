@@ -12,3 +12,5 @@ cards.forEach((card) => {
     console.log("Active 해제");
   });
 });
+
+

@@ -62,13 +62,16 @@ button {
     padding: 0 20px;
   }
 }
-#sub-MPyc .sub-MPyc-inner .subMainImg {
-  height: 800px;
-  background: url(/sub_Images/sub_academy_mainbg.jpg) no-repeat;
+#sub-MPyc .sub-MPyc-inner .subMainImg-hiddenBox {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+#sub-MPyc .sub-MPyc-inner .subMainImg-hiddenBox .subMainImg img {
   position: relative;
   margin: 120px 0 200px 0;
 }
-#sub-MPyc .sub-MPyc-inner .subMainImg h6 {
+#sub-MPyc .sub-MPyc-inner .subMainImg-hiddenBox .subMainImg h6 {
   position: absolute;
   color: white;
   left: 50%;
@@ -79,13 +82,6 @@ button {
   text-align: center;
   font-size: 45px;
   z-index: 10;
-}
-#sub-MPyc .sub-MPyc-inner .subMainImg::after {
-  position: absolute;
-  content: "";
-  background: rgba(0, 0, 0, 0.164);
-  width: 100%;
-  height: 100%;
 }
 #sub-MPyc .sub-MPyc-inner .Academy-Warps {
   display: -webkit-box;
@@ -180,4 +176,127 @@ button {
           transform: translateY(-50%);
   -webkit-filter: invert(100%);
           filter: invert(100%);
+}
+
+@media screen and (max-width: 768px) {
+  #sub-MPyc .sub-MPyc-inner .subMainImg-hiddenBox {
+    position: relative;
+    width: 100%;
+    border: 10px solid red;
+    height: auto;
+  }
+  #sub-MPyc .sub-MPyc-inner .subMainImg-hiddenBox .subMainImg img {
+    width: 100%;
+    position: relative;
+    margin: 20px 0 20px 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #sub-MPyc .sub-MPyc-inner .subMainImg-hiddenBox .subMainImg h6 {
+    position: absolute;
+    color: white;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 1000px;
+    text-align: center;
+    font-size: 23px;
+    z-index: 10;
+    width: 90%;
+  }
+  #sub-MPyc .sub-MPyc-inner .Academy-Warps {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 50px;
+  }
+  #sub-MPyc .sub-MPyc-inner .Academy-Warps .Academy h2 {
+    font-family: var(--font-Pretendard);
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  #sub-MPyc .sub-MPyc-inner .Academy-Warps .Academy > p {
+    font-size: 20px;
+    margin-bottom: 45px;
+    font-family: var(--font-Pretendard);
+  }
+  #sub-MPyc .sub-MPyc-inner .Academy-Warps .Academy .card-Warps {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #sub-MPyc .sub-MPyc-inner .Academy-Warps .Academy .card-Warps .card {
+    position: relative;
+    width: 32%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 120px;
+  }
+  #sub-MPyc .sub-MPyc-inner .Academy-Warps .Academy .card-Warps .card img {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+  }
+  #sub-MPyc .sub-MPyc-inner .Academy-Warps .Academy .card-Warps .card p {
+    font-family: var(--font-Pretendard);
+    padding-top: 15px;
+  }
+  #sub-MPyc .sub-MPyc-inner .Academy-Warps .Academy .card-Warps .card .card-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  #sub-MPyc .sub-MPyc-inner .Academy-Warps .Academy .card-Warps .card .card-desc {
+    color: #333;
+  }
+  #sub-MPyc .sub-MPyc-inner .Academy-Warps .Academy .card-Warps .card .effect {
+    position: absolute;
+    left: 0;
+    top: 0;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  #sub-MPyc .sub-MPyc-inner .Academy-Warps .Academy .card-Warps .card .effect.active {
+    width: 80px;
+    height: 80px;
+  }
+  #sub-MPyc .sub-MPyc-inner .Academy-Warps .Academy .card-Warps .card .effect.active img {
+    left: 20px;
+  }
+  #sub-MPyc .sub-MPyc-inner .Academy-Warps .Academy .card-Warps .card .effect img {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    position: absolute;
+    left: -210px;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-filter: invert(100%);
+            filter: invert(100%);
+  }
 }
