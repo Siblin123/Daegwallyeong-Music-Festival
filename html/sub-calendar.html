@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="../css/sub-visual.css">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="/css/sub-calendar.css">
 </head>
 
 <body>
@@ -195,17 +195,17 @@
       <div class="calendar-inner">
         <div class="date">
           <button class="prev">◀</button>
-          <p>2025.06</p>
+          <p class="date_p">2025.6</p>
           <button class="next">▶</button>
         </div>
         <div class="type">
           <ul>
-            <li>평창대관령음악제</li>
-            <li>찾아가는음악제</li>
-            <li>찾아가는 가족음악제</li>
-            <li>부대 행사</li>
-            <li>[기획]강원의 세계]</li>
-            <li>[기획]] 4色 콘서트</li>
+            <li> <span data-color="#BD2121"></span> 평창대관령음악제</li>
+            <li> <span data-color="#E3871B"></span> 찾아가는음악제</li>
+            <li> <span data-color="#FFE247"></span> 찾아가는 가족음악제</li>
+            <li> <span data-color="#53BD21"></span> 부대 행사</li>
+            <li> <span data-color="#214DBD"></span> [기획]강원의 세계]</li>
+            <li> <span data-color="#9E21BD"></span> [기획]] 4色 콘서트</li>
           </ul>
         </div>
         <div class="table">
@@ -221,43 +221,8 @@
                 <th>SAT</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
+            <tbody class="day-tbody">
+             
             </tbody>
           </table>
 
@@ -265,9 +230,9 @@
       </div>
     </div>
   </div>
-
+  <script src="../js/swiper_.js"></script>
   <script src="../js/sub-js/sub-visual.js"></script>
-
+  <script src="../js/sub-js/calendar.js"></script>
 </body>
 
 </html>

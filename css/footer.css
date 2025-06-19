@@ -26,6 +26,11 @@ html {
   font-family: "Nanum Myeongjo", serif;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+}
+
 body {
   background-color: #F5F3EC;
 }
