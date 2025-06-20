@@ -68,6 +68,9 @@ button {
   color: white;
   margin-bottom: 120px;
 }
+#Mpyc .Mpyc-inner .title-warp {
+  overflow: hidden;
+}
 #Mpyc .Mpyc-inner .title-warp .title-text {
   display: -webkit-box;
   display: -ms-flexbox;

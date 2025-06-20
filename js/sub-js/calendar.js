@@ -60,20 +60,21 @@ function reload_Calendar(month) {
   let curDate = 0;
   let startFirstDate = 0;
   for (let i = 0; i < 5; i++) {
-    
+
     let tr = document.createElement("tr");
     if (i == 0) {
       startFirstDate = startDate.getDay();
       console.log(startFirstDate + "시작요일 0 일요일");
-      for(let k=0; k<startFirstDate; k++)
-      {
+      for (let k = 0; k < startFirstDate; k++) {
         let td = document.createElement("td");
         td.innerHTML = "";
         tr.appendChild(td);
+
+
       }
     }
-    else{
-      startFirstDate=0;
+    else {
+      startFirstDate = 0;
     }
 
     for (let j = startFirstDate; j < 7; j++) {
@@ -84,7 +85,14 @@ function reload_Calendar(month) {
       curDate++;
       if (curDate <= endDate.getDate()) {
         td.innerHTML = curDate;
-
+        //요일별 색상 변경
+        if (j == 0) {
+          td.style.color = "red";
+        }
+        else if(j==6)
+        {
+          td.style.color = "blue";
+        }
       }
       else {
 

@@ -4,23 +4,29 @@
   background: url(/sub_Images/concert_bg01.jpg);
   background-size: cover;
 }
-.visual .text-box .visual-inner #lnb.lnb1 ul {
+.visual .text-box .visual-inner #lnb.lnb1 > ul {
   position: absolute;
-  left: 2%;
+  left: 6%;
   top: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 17px;
+  gap: 25px;
   color: #ffffff;
 }
-.visual .text-box .visual-inner #lnb.lnb1 ul > li {
+.visual .text-box .visual-inner #lnb.lnb1 > ul > li {
   position: relative;
 }
-.visual .text-box .visual-inner #lnb.lnb1 ul > li .list-arrow {
+.visual .text-box .visual-inner #lnb.lnb1 > ul > li:not(:last-child)::after {
+  position: absolute;
+  content: ">";
+  top: 0;
+  left: 32px;
+}
+.visual .text-box .visual-inner #lnb.lnb1 > ul > li .list-arrow {
   cursor: pointer;
 }
-.visual .text-box .visual-inner #lnb.lnb1 ul > li .other-list {
+.visual .text-box .visual-inner #lnb.lnb1 > ul > li .other-list {
   position: absolute;
   left: -270%;
   width: 120px;
@@ -40,15 +46,11 @@
   color: black;
   overflow: hidden;
 }
-.visual .text-box .visual-inner #lnb.lnb1 ul > li .other-list.active {
+.visual .text-box .visual-inner #lnb.lnb1 > ul > li .other-list.active {
   max-height: 300px;
 }
-.visual .text-box .visual-inner #lnb.lnb1 ul > li .other-list li {
+.visual .text-box .visual-inner #lnb.lnb1 > ul > li .other-list li {
   padding: 10px;
-}
-.visual .text-box .visual-inner #lnb.lnb1 ul > li:not(:last-child)::after {
-  position: absolute;
-  content: ">";
 }
 .visual .text-box .visual-inner .text {
   position: absolute;
@@ -61,10 +63,39 @@
   font-size: 120px;
   color: white;
   font-family: var(--font-Cormorant);
+  -webkit-animation: fadeEffect 2s forwards;
+          animation: fadeEffect 2s forwards;
 }
-
+@-webkit-keyframes fadeEffect {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeEffect {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media screen and (max-width: 768px) {
-  .visual {
+  .visual .visual {
     position: relative;
     height: 666px;
     background: url(/sub_Images/concert_bg01.jpg);
@@ -72,9 +103,9 @@
     background-position: center;
     width: 100%;
   }
-  .visual .text-box .visual-inner #lnb.lnb1 ul {
+  .visual .visual .text-box .visual-inner #lnb.lnb1 ul {
     position: absolute;
-    left: 2%;
+    left: 6%;
     top: 15%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -82,13 +113,13 @@
     gap: 17px;
     color: #ffffff;
   }
-  .visual .text-box .visual-inner #lnb.lnb1 ul > li {
+  .visual .visual .text-box .visual-inner #lnb.lnb1 ul > li {
     position: relative;
   }
-  .visual .text-box .visual-inner #lnb.lnb1 ul > li .list-arrow {
+  .visual .visual .text-box .visual-inner #lnb.lnb1 ul > li .list-arrow {
     cursor: pointer;
   }
-  .visual .text-box .visual-inner #lnb.lnb1 ul > li .other-list {
+  .visual .visual .text-box .visual-inner #lnb.lnb1 ul > li .other-list {
     position: absolute;
     left: -270%;
     width: 120px;
@@ -108,25 +139,26 @@
     color: black;
     overflow: hidden;
   }
-  .visual .text-box .visual-inner #lnb.lnb1 ul > li .other-list.active {
+  .visual .visual .text-box .visual-inner #lnb.lnb1 ul > li .other-list.active {
     max-height: 300px;
   }
-  .visual .text-box .visual-inner #lnb.lnb1 ul > li .other-list li {
+  .visual .visual .text-box .visual-inner #lnb.lnb1 ul > li .other-list li {
     padding: 10px;
   }
-  .visual .text-box .visual-inner #lnb.lnb1 ul > li:not(:last-child)::after {
+  .visual .visual .text-box .visual-inner #lnb.lnb1 ul > li:not(:last-child)::after {
     position: absolute;
-    content: ">";
   }
-  .visual .text-box .visual-inner .text {
+  .visual .visual .text-box .visual-inner .text {
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
-  .visual .text-box .visual-inner .text h2 {
-    font-size: 120px;
+  .visual .visual .text-box .visual-inner .text h2 {
+    font-size: 40px;
+    width: 100vw;
+    text-align: center;
     color: white;
     font-family: var(--font-Cormorant);
   }

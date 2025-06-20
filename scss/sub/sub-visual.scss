@@ -8,17 +8,23 @@
     .visual-inner {
       #lnb {
         &.lnb1 {
-          ul {
+          >ul {
             position: absolute;
-            left: 2%;
+            left: 6%;
             top: 15%;
             display: flex;
-            gap: 17px;
+            gap: 25px;
             color: #ffffff;
-
+            
             >li {
+              &:not(:last-child)::after {
+                position: absolute;
+                content: ">";
+                top: 0;
+                left: 32px;
+                
+              }
               position: relative;
-
               i {}
 
               .list-arrow {
@@ -48,10 +54,7 @@
                 }
               }
 
-              &:not(:last-child)::after {
-                position: absolute;
-                content: ">";
-              }
+             
             }
           }
         }
@@ -67,84 +70,106 @@
           font-size: 120px;
           color: white;
           font-family: var(--font-Cormorant);
+          animation: fadeEffect 2s forwards;
+        }
+
+        @keyframes fadeEffect {
+          0% {
+            transform: scale(1.5);
+            opacity: 0;
+          }
+          
+          
+          
+          50%{
+            
+            transform: scale(1);
+          }
+
+          100% {
+            opacity: 1;
+          }
+
         }
       }
     }
   }
-}
 
-@media screen and (max-width: 768px) {
-  .visual {
-    position: relative;
-    height: 666px;
-    background: url(/sub_Images/concert_bg01.jpg);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
+  @media screen and (max-width: 768px) {
+    .visual {
+      position: relative;
+      height: 666px;
+      background: url(/sub_Images/concert_bg01.jpg);
+      background-size: cover;
+      background-position: center;
+      width: 100%;
 
-    .text-box {
-      .visual-inner {
-        #lnb {
-          &.lnb1 {
-            ul {
-              position: absolute;
-              left: 2%;
-              top: 15%;
-              display: flex;
-              gap: 17px;
-              color: #ffffff;
+      .text-box {
+        .visual-inner {
+          #lnb {
+            &.lnb1 {
+              ul {
+                position: absolute;
+                left: 6%;
+                top: 15%;
+                display: flex;
+                gap: 17px;
+                color: #ffffff;
 
-              >li {
-                position: relative;
+                >li {
+                  position: relative;
 
-                i {}
+                  i {}
 
-                .list-arrow {
-                  cursor: pointer;
-                }
-
-                .other-list {
-                  position: absolute;
-                  left: -270%;
-                  width: 120px;
-                  top: 100%;
-                  text-align: center;
-                  display: flex;
-                  flex-direction: column;
-                  max-height: 0;
-                  transition: .3s;
-                  background-color: #ffffff;
-                  color: black;
-                  overflow: hidden;
-
-                  &.active {
-                    max-height: 300px;
+                  .list-arrow {
+                    cursor: pointer;
                   }
 
-                  li {
-                    padding: 10px;
-                  }
-                }
+                  .other-list {
+                    position: absolute;
+                    left: -270%;
+                    width: 120px;
+                    top: 100%;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    max-height: 0;
+                    transition: .3s;
+                    background-color: #ffffff;
+                    color: black;
+                    overflow: hidden;
 
-                &:not(:last-child)::after {
-                  position: absolute;
-                  content: ">";
+                    &.active {
+                      max-height: 300px;
+                    }
+
+                    li {
+                      padding: 10px;
+                    }
+                  }
+
+                  &:not(:last-child)::after {
+                    position: absolute;
+                   
+                  }
                 }
               }
             }
           }
-        }
 
-        .text {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
+          .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
 
-          h2 {
-            font-size: 120px;
-            color: white;
-            font-family: var(--font-Cormorant);
+            h2 {
+              font-size: 40px;
+              width: 100vw;
+              text-align: center;
+              color: white;
+              font-family: var(--font-Cormorant);
+            }
           }
         }
       }

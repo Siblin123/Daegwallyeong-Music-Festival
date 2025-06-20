@@ -89,3 +89,88 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  #schedule {
+    padding: 120px 0 200px 0;
+  
+    .calendar {
+      .calendar-inner {
+        .date {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 30px;
+          margin-bottom: 50px;
+          .prev,
+          .next {
+            font-size: 13px;
+          }
+  
+          p {
+            font-size: 50px;
+          }
+        }
+  
+        .type {
+          ul {
+            display: flex;
+            gap: 10px 25px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            font-size: 12px;
+            li {
+             
+              font-size: 15px;
+              font-family: var(--font-Pretendard);
+              position: relative;
+              span{
+                content: "";
+                background-color: violet;
+                position: absolute;
+                left: -15px;
+                top: 4px;
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+              }
+            }
+          }
+        }
+  
+        .table {
+          table {
+            width: 100%;
+            border-collapse: collapse;
+            border-color: rgb(32, 32, 32);
+            font-family: var(--font-NotoSans);
+            td {
+              border: 1px solid #ccc;
+              padding: 10px;
+              height: 50px;
+              vertical-align: top;
+              text-align: left;
+              width: 200px;
+              font-size: 14px;
+            }
+  
+            thead {
+              background-color: #f5f5f5;
+  
+              th {
+                font-weight: bold;
+                height: 50px;
+                background-color: #231815;
+                color: #fff;
+            font-weight: 400;
+  
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+}

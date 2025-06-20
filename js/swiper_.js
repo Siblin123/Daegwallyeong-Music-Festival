@@ -128,6 +128,7 @@ window.addEventListener('scroll', () => {
 
 //=================================해더 끝
 
+
 let search_icon = document.querySelector(".search-icon");
 let search_icon_inner = document.getElementById("search").querySelector(".inner");
 
