@@ -207,7 +207,7 @@ button {
 #header .header-inner .flex-box .left nav .menu li > a {
   padding: 10px 20px;
   color: #ffffff;
-  font-size: 19px;
+  font-size: 17px;
 }
 #header .header-inner .flex-box .left nav .menu li .sub-menu-box {
   position: relative;
@@ -229,6 +229,7 @@ button {
   width: 190px;
   text-align: center;
   color: #000;
+  font-size: 17px;
 }
 #header .header-inner .flex-box .right {
   display: -webkit-box;
@@ -393,6 +394,7 @@ button {
     width: 100%;
   }
   #search .blank .inner {
+    position: fixed;
     height: 300px;
     display: -webkit-box;
     display: -ms-flexbox;

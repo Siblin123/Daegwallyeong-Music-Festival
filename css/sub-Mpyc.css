@@ -71,11 +71,13 @@ button {
   position: relative;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
+  width: 0%;
   height: 822px;
   display: block;
   margin: 120px auto;
   overflow: hidden;
+}
+#sub-MPyc .sub-MPyc-inner .subMainImg-hiddenBox .subMainImg.active img {
   -webkit-animation: shrinkWidth 1s forwards;
           animation: shrinkWidth 1s forwards;
 }
@@ -106,6 +108,9 @@ button {
   text-align: center;
   font-size: 45px;
   z-index: 10;
+  opacity: 0;
+}
+#sub-MPyc .sub-MPyc-inner .subMainImg-hiddenBox .subMainImg.active h6 {
   -webkit-animation: opacity 1s forwards;
           animation: opacity 1s forwards;
 }

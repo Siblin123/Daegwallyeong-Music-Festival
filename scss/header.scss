@@ -58,7 +58,7 @@
               >a {
                 padding: 10px 20px;
                 color: #ffffff;
-                font-size: 19px;
+                font-size: 17px;
               }
 
               .sub-menu-box {
@@ -81,6 +81,7 @@
                       width: 190px;
                       text-align: center;
                       color: #000;
+                      font-size: 17px;
                     }
                   }
                 }
@@ -174,7 +175,6 @@
 
       .searchform {
         .search-inner {
-
           .input {
             width: 50%;
             position: relative;
@@ -335,10 +335,10 @@
     width: 100%;
   
   
-  
     .blank {
   
       .inner {
+        position: fixed;
         height: 300px;
         display: flex;
         align-items: center;

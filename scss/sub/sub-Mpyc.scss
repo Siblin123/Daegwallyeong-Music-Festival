@@ -12,14 +12,17 @@
         img {
           position: relative;
           object-fit: cover;
-          width: 100%;
+          width: 0%;
           height: 822px;
           display: block;
           margin: 120px auto;
           overflow: hidden;
+       
+        }
+        
+        &.active img{
           animation: shrinkWidth 1s forwards;
         }
-
         @keyframes shrinkWidth {
           0% {
             width: 0%;
@@ -40,9 +43,12 @@
           text-align: center;
           font-size: 45px;
           z-index: 10;
+          
+          opacity: 0;
+        }
+        &.active h6{
           animation: opacity 1s forwards;
         }
-
         @keyframes opacity {
           0% {
             opacity: 0%;

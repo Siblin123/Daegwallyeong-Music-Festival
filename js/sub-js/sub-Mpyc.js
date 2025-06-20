@@ -14,3 +14,14 @@ cards.forEach((card) => {
 });
 
 
+let subMainImg = document.querySelector(".subMainImg");
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  console.log(`스크롤 위치: ${scrollY}px`);
+  
+  if (scrollY > 200) {
+    console.log('250px 이상 내려왔습니다!');
+    subMainImg.classList.add("active")
+  }
+});
+
