@@ -60,13 +60,18 @@
 
 ### 🏠 메인 페이지
 
-
-<table width="100%">
-  <tr>
-    <td width="70%">
+메인비주얼 및 헤더 부분
+![Image](https://github.com/user-attachments/assets/77f5bc81-4956-4ea8-9908-206229601c14)
 
 
+concert 부분
+![Image](https://github.com/user-attachments/assets/586cc54e-00d8-4e16-83a3-e6c5779cd632)
 
+Mpyc Academy 부분
+![Image](https://github.com/user-attachments/assets/f23b9057-fa88-4526-80d5-0b6473bd389d)
+
+notice 및 footer
+![Image](https://github.com/user-attachments/assets/7f178651-19c3-4040-8f3d-6bc4cd653c78)
  ---
 ### 전체 페이지 스크린샷
 ![Image](https://github.com/user-attachments/assets/a9baab56-2aa6-4ac1-8ef0-60449d47f654)
