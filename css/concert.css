@@ -127,6 +127,9 @@ button {
   color: white;
   font-family: var(--font-Pretendard);
 }
+#concert .concert-inner .flex-box .all-day i {
+  color: red;
+}
 #concert .concert-inner .poster-Swiper .swiper-wrapper .swiper-slide {
   width: auto;
 }
@@ -199,5 +202,8 @@ button {
     right: 0;
     top: 0;
     height: 45px;
+  }
+  #concert .concert-inner .flex-box .all-day i i {
+    color: red;
   }
 }

@@ -586,6 +586,9 @@ button {
   color: white;
   font-family: var(--font-Pretendard);
 }
+#concert .concert-inner .flex-box .all-day i {
+  color: red;
+}
 #concert .concert-inner .poster-Swiper .swiper-wrapper .swiper-slide {
   width: auto;
 }
@@ -658,6 +661,9 @@ button {
     right: 0;
     top: 0;
     height: 45px;
+  }
+  #concert .concert-inner .flex-box .all-day i i {
+    color: red;
   }
 }
 @font-face {
@@ -772,6 +778,13 @@ button {
   background: url("../images/link_arrow.svg") no-repeat center;
   color: black;
 }
+#Mpyc .Mpyc-inner .title-warp .title-text i {
+  position: absolute;
+  left: 50%;
+  top: 16%;
+  -webkit-transform: translate(-50%, -23%);
+          transform: translate(-50%, -23%);
+}
 #Mpyc .Mpyc-inner .gallery-warp {
   width: 100%;
 }
@@ -840,6 +853,13 @@ button {
             transform: translate(-50%, -50%) scale(0.7);
     background: url("../images/link_arrow.svg") no-repeat center;
     color: black;
+  }
+  #Mpyc .Mpyc-inner .title-warp .title-text i {
+    position: absolute;
+    left: 50%;
+    top: 16%;
+    -webkit-transform: translate(-50%, -23%);
+            transform: translate(-50%, -23%);
   }
   #Mpyc .Mpyc-inner .gallery-warp {
     width: 100%;
@@ -2090,4 +2110,7 @@ button {
   #footer a {
     color: white;
   }
+}
+.fa-hand-point-left, .fa-hand-point-down {
+  color: red;
 }
