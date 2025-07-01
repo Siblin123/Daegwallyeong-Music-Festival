@@ -521,6 +521,10 @@ button {
     padding: 0 20px;
   }
 }
+.fa-hand-point-left, .fa-hand-point-down {
+  color: red;
+}
+
 #concert {
   margin-top: 80px;
 }
@@ -662,7 +666,7 @@ button {
     top: 0;
     height: 45px;
   }
-  #concert .concert-inner .flex-box .all-day i i {
+  #concert .concert-inner .flex-box .all-day i {
     color: red;
   }
 }
@@ -727,6 +731,10 @@ button {
     padding: 0 20px;
   }
 }
+.fa-hand-point-left, .fa-hand-point-down {
+  color: red;
+}
+
 #Mpyc {
   background-color: #231815;
   height: 120vh;
@@ -2110,7 +2118,4 @@ button {
   #footer a {
     color: white;
   }
-}
-.fa-hand-point-left, .fa-hand-point-down {
-  color: red;
 }

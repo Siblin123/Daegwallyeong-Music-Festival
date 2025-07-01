@@ -1,5 +1,10 @@
 @import "common";
 
+.fa-hand-point-left,.fa-hand-point-down {
+  color: red;
+
+}
+
 #concert {
   margin-top: 80px;
 
@@ -179,11 +184,11 @@
          
         }
 
-        i{
+        
           i{
             color: red;
           }
-        }
+        
       }
     }
 
