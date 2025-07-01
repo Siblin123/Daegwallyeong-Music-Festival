@@ -1,7 +1,7 @@
 .visual {
   position: relative;
   height: 666px;
-  background: url(/sub_Images/concert_bg01.jpg);
+  background: url(sub_Images/concert_bg01.jpg);
   background-size: cover;
 }
 .visual .text-box .visual-inner #lnb.lnb1 > ul {
@@ -98,7 +98,7 @@
   .visual .visual {
     position: relative;
     height: 666px;
-    background: url(/sub_Images/concert_bg01.jpg);
+    background: url(sub_Images/concert_bg01.jpg);
     background-size: cover;
     background-position: center;
     width: 100%;
